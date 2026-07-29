@@ -56,6 +56,16 @@ CLASS_ICONS = {
 }
 
 
+def balance_value(value) -> str:
+    if value is None:
+        return "0"
+
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+
+    return str(value)
+
+
 @router.message(F.text == "📊 ДЦП")
 async def dcp_menu(message: Message):
     await message.answer(
@@ -127,7 +137,6 @@ async def roster_info(callback: CallbackQuery):
                 text += f"\n... ще {len(members) - 12} учасників"
 
         await callback.message.edit_text(text)
-
         await callback.answer()
 
     except Exception as e:
@@ -139,9 +148,73 @@ async def roster_info(callback: CallbackQuery):
 
 @router.message(F.text == "💰 Баланс")
 async def balance(message: Message):
-    await message.answer(
-        "🚧 Функція балансу буде реалізована пізніше."
-    )
+    try:
+        rosters = dcp_api.get_rosters()
+
+        if not rosters:
+            await message.answer("Ростерів не знайдено.")
+            return
+
+        await message.answer(
+            "💰 <b>Оберіть ростер</b>",
+            reply_markup=rosters_keyboard(
+                rosters,
+                prefix="balance",
+            ),
+        )
+
+    except Exception as e:
+        await message.answer(
+            f"Помилка при отриманні балансів:\n{e}"
+        )
+
+
+@router.callback_query(F.data.startswith("balance:"))
+async def roster_balance(callback: CallbackQuery):
+    try:
+        roster_id = callback.data.split(":")[1]
+
+        rosters = dcp_api.get_rosters()
+
+        roster = next(
+            (r for r in rosters if str(r["id"]) == roster_id),
+            None,
+        )
+
+        if roster is None:
+            await callback.answer(
+                "Ростер не знайдено",
+                show_alert=True,
+            )
+            return
+
+        balances = roster.get("balances", {})
+
+        normal = balances.get("normal", {})
+        epic = balances.get("epic", {})
+
+        text = (
+            f"🏰 <b>{roster['name']}</b>\n\n"
+
+            f"💵 <b>Звичайний баланс</b>\n"
+            f"🟢 Доступно: {balance_value(normal.get('available'))}\n"
+            f"🟡 Зарезервовано: {balance_value(normal.get('reserved'))}\n"
+            f"⚪ Всього: {balance_value(normal.get('total'))}\n\n"
+
+            f"💎 <b>Епічний баланс</b>\n"
+            f"🟢 Доступно: {balance_value(epic.get('available'))}\n"
+            f"🟡 Зарезервовано: {balance_value(epic.get('reserved'))}\n"
+            f"⚪ Всього: {balance_value(epic.get('total'))}"
+        )
+
+        await callback.message.edit_text(text)
+        await callback.answer()
+
+    except Exception as e:
+        await callback.answer(
+            str(e),
+            show_alert=True,
+        )
 
 
 @router.message(F.text == "⬅️ Назад")
