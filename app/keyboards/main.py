@@ -9,6 +9,7 @@ main_keyboard = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="📢 Оголошення"),
+            KeyboardButton(text="📊 ДЦП"),
         ],
     ],
     resize_keyboard=True,
