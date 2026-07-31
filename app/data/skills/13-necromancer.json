@@ -1,0 +1,552 @@
+{
+  "Magical": [
+    {
+      "name": "Heal",
+      "slug": "1011-heal",
+      "level": "Lv. 1",
+      "description": "Restores the target's HP with 50 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1011-heal/1"
+    },
+    {
+      "name": "Cure Poison",
+      "slug": "1012-cure-poison",
+      "level": "Lv. 1",
+      "description": "Cures the target of minor poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/1012-cure-poison/1"
+    },
+    {
+      "name": "Battle Heal",
+      "slug": "1015-battle-heal",
+      "level": "Lv. 1",
+      "description": "Immediately restores the target's HP with 83 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1015-battle-heal/1"
+    },
+    {
+      "name": "Group Heal",
+      "slug": "1027-group-heal",
+      "level": "Lv. 1",
+      "description": "Restores all party members' HP with 66 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1027-group-heal/1"
+    },
+    {
+      "name": "Servitor Recharge",
+      "slug": "1126-servitor-recharge",
+      "level": "Lv. 1",
+      "description": "Recovers the servitor's MP with up to 41 Power depending on the servitor's level.",
+      "url": "https://mw2.wiki/lu4/skill/1126-servitor-recharge/1"
+    },
+    {
+      "name": "Servitor Heal",
+      "slug": "1127-servitor-heal",
+      "level": "Lv. 1",
+      "description": "Recovers the servitor's HP with 169 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1127-servitor-heal/1"
+    },
+    {
+      "name": "Summon Reanimated Man",
+      "slug": "1129-summon-reanimated-man",
+      "level": "Lv. 1",
+      "description": "Summons a Reanimated Man.",
+      "url": "https://mw2.wiki/lu4/skill/1129-summon-reanimated-man/1"
+    },
+    {
+      "name": "Death Spike",
+      "slug": "1148-death-spike",
+      "level": "Lv. 1",
+      "description": "Throws a bone to inflict dark damage on an enemy with 49 Power added to M. Atk.",
+      "url": "https://mw2.wiki/lu4/skill/1148-death-spike/1"
+    },
+    {
+      "name": "Corpse Life Drain",
+      "slug": "1151-corpse-life-drain",
+      "level": "Lv. 1",
+      "description": "Absorbs residual life energy from a corpse to restore the user's HP with 260 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1151-corpse-life-drain/1"
+    },
+    {
+      "name": "Summon Corrupted Man",
+      "slug": "1154-summon-corrupted-man",
+      "level": "Lv. 1",
+      "description": "Summons a Corrupted Man.",
+      "url": "https://mw2.wiki/lu4/skill/1154-summon-corrupted-man/1"
+    },
+    {
+      "name": "Corpse Burst",
+      "slug": "1155-corpse-burst",
+      "level": "Lv. 1",
+      "description": "Detonates a corpse to inflict damage on the enemies using 61 Power added to M. Atk.",
+      "url": "https://mw2.wiki/lu4/skill/1155-corpse-burst/1"
+    },
+    {
+      "name": "Forget",
+      "slug": "1156-forget",
+      "level": "Lv. 1",
+      "description": "Takes away an enemy's will to attack.",
+      "url": "https://mw2.wiki/lu4/skill/1156-forget/1"
+    },
+    {
+      "name": "Body To Mind",
+      "slug": "1157-body-to-mind",
+      "level": "Lv. 1",
+      "description": "Sacrifices HP to regenerate 22 MP.",
+      "url": "https://mw2.wiki/lu4/skill/1157-body-to-mind/1"
+    },
+    {
+      "name": "Curse Death Link",
+      "slug": "1159-curse-death-link",
+      "level": "Lv. 1",
+      "description": "Transfers user's pain, using 68 Power to inflict dark damage on an enemy. Power increases as HP decreases.",
+      "url": "https://mw2.wiki/lu4/skill/1159-curse-death-link/1"
+    },
+    {
+      "name": "Wind Strike",
+      "slug": "1177-wind-strike",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 12 Power to create a powerful hurricane that inflicts Wind damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1177-wind-strike/1"
+    },
+    {
+      "name": "Vampiric Claw",
+      "slug": "1234-vampiric-claw",
+      "level": "Lv. 1",
+      "description": "Inflicts dark damage on an enemy with 49 Power added to M. Atk. Absorbs 40% of the damage as HP.",
+      "url": "https://mw2.wiki/lu4/skill/1234-vampiric-claw/1"
+    },
+    {
+      "name": "Shadow Flare",
+      "slug": "1267-shadow-flare",
+      "level": "Lv. 1",
+      "description": "Inflicts dark damage on an enemy with 65 Power added to M. Atk.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/1267-shadow-flare/1"
+    },
+    {
+      "name": "Summon Cursed Man",
+      "slug": "1334-summon-cursed-man",
+      "level": "Lv. 1",
+      "description": "Summons a Cursed Man.",
+      "url": "https://mw2.wiki/lu4/skill/1334-summon-cursed-man/1"
+    },
+    {
+      "name": "Dark Vortex",
+      "slug": "1343-dark-vortex",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage. Power: 126.\nAbsorbs 25% of damage as HP.\nApplies to enemy:\nResistance to Dark -15%\nSpeed -10%\nAtk. Spd. -10%\nCast. Spd. -10%\nBurns 12 MP every sec.\nIgnores Shield Defence.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/1343-dark-vortex/1"
+    },
+    {
+      "name": "Eclipse",
+      "slug": "24530-eclipse",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage around enemy. Power: 127.\nBurns 100 HP every second.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/24530-eclipse/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Concentration",
+      "slug": "1078-concentration",
+      "level": "Lv. 1",
+      "description": "Chance to interrupt magic casting -18%.",
+      "url": "https://mw2.wiki/lu4/skill/1078-concentration/1"
+    },
+    {
+      "name": "Servitor Wind Walk",
+      "slug": "1144-servitor-wind-walk",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's Speed by 20.",
+      "url": "https://mw2.wiki/lu4/skill/1144-servitor-wind-walk/1"
+    },
+    {
+      "name": "Resist Dark",
+      "slug": "1393-resist-dark",
+      "level": "Lv. 1",
+      "description": "Resistance to Dark +12%.",
+      "url": "https://mw2.wiki/lu4/skill/1393-resist-dark/1"
+    },
+    {
+      "name": "Dark Weapon",
+      "slug": "1443-dark-weapon",
+      "level": "Lv. 1",
+      "description": "Increases the target's Dark attack level. Can be used on party members.",
+      "url": "https://mw2.wiki/lu4/skill/1443-dark-weapon/1"
+    },
+    {
+      "name": "Improved Combat",
+      "slug": "1499-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/1499-improved-combat/1"
+    },
+    {
+      "name": "Enlightenment",
+      "slug": "1532-enlightenment",
+      "level": "Lv. 1",
+      "description": "M. Atk. +50%\nCast. Spd. +30%\nM. Crit. Rate +50%\nChance to interrupt magic casting -50%\nM. Skills MP Consumption +30%\nSpeed -30%.",
+      "url": "https://mw2.wiki/lu4/skill/1532-enlightenment/1"
+    },
+    {
+      "name": "Mass Improved Combat",
+      "slug": "27217-mass-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nFor party members:\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/27217-mass-improved-combat/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Silence",
+      "slug": "1064-silence",
+      "level": "Lv. 1",
+      "description": "Blocks an enemy's use of magic.",
+      "url": "https://mw2.wiki/lu4/skill/1064-silence/1"
+    },
+    {
+      "name": "Sleep",
+      "slug": "1069-sleep",
+      "level": "Lv. 1",
+      "description": "Causes an enemy to sleep.",
+      "url": "https://mw2.wiki/lu4/skill/1069-sleep/1"
+    },
+    {
+      "name": "Curse Discord",
+      "slug": "1163-curse-discord",
+      "level": "Lv. 1",
+      "description": "Confuses an enemy to attack its ally.",
+      "url": "https://mw2.wiki/lu4/skill/1163-curse-discord/1"
+    },
+    {
+      "name": "Curse Weakness",
+      "slug": "1164-curse-weakness",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's P. Atk. by 17%.",
+      "url": "https://mw2.wiki/lu4/skill/1164-curse-weakness/1"
+    },
+    {
+      "name": "Poisonous Cloud",
+      "slug": "1167-poisonous-cloud",
+      "level": "Lv. 1",
+      "description": "Creates a poison cloud around an enemy, causing loss of 24 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/1167-poisonous-cloud/1"
+    },
+    {
+      "name": "Curse Poison",
+      "slug": "1168-curse-poison",
+      "level": "Lv. 1",
+      "description": "Poisons an enemy, causing loss of 11 HP every second.",
+      "url": "https://mw2.wiki/lu4/skill/1168-curse-poison/1"
+    },
+    {
+      "name": "Curse Fear",
+      "slug": "1169-curse-fear",
+      "level": "Lv. 1",
+      "description": "Frightens an enemy into fleeing.",
+      "url": "https://mw2.wiki/lu4/skill/1169-curse-fear/1"
+    },
+    {
+      "name": "Anchor",
+      "slug": "1170-anchor",
+      "level": "Lv. 1",
+      "description": "Slows the enemy, decreases Speed by 50%, Atk. Spd. by 50% and Cast. Spd. by 50%, at the end of the effect there is complete paralysis for 5 sec.",
+      "url": "https://mw2.wiki/lu4/skill/1170-anchor/1"
+    },
+    {
+      "name": "Curse Chaos",
+      "slug": "1222-curse-chaos",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Accuracy by 9.",
+      "url": "https://mw2.wiki/lu4/skill/1222-curse-chaos/1"
+    },
+    {
+      "name": "Curse Gloom",
+      "slug": "1263-curse-gloom",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage. Power: 47.\nApplies to enemy:\nM. Def. -15%\nResistance to all elements -5%.",
+      "url": "https://mw2.wiki/lu4/skill/1263-curse-gloom/1"
+    },
+    {
+      "name": "Curse Disease",
+      "slug": "1269-curse-disease",
+      "level": "Lv. 1",
+      "description": "Decreases the power of HP recovery magic received by an enemy by 50%.",
+      "url": "https://mw2.wiki/lu4/skill/1269-curse-disease/1"
+    },
+    {
+      "name": "Mass Slow",
+      "slug": "1298-mass-slow",
+      "level": "Lv. 1",
+      "description": "Decreases Speed near an enemy by 30%.",
+      "url": "https://mw2.wiki/lu4/skill/1298-mass-slow/1"
+    },
+    {
+      "name": "Curse of Doom",
+      "slug": "1336-curse-of-doom",
+      "level": "Lv. 1",
+      "description": "Blocks all enemy's P. Skills, M. Skills and Rhythms.",
+      "url": "https://mw2.wiki/lu4/skill/1336-curse-of-doom/1"
+    },
+    {
+      "name": "Curse of Abyss",
+      "slug": "1337-curse-of-abyss",
+      "level": "Lv. 1",
+      "description": "M. Atk. -20%\nCast. Spd. -15%\nM. Crit. Rate -20%\nSpeed -7%\nP. Def. -20%\nEvasion -4.",
+      "url": "https://mw2.wiki/lu4/skill/1337-curse-of-abyss/1"
+    },
+    {
+      "name": "Mass Fear",
+      "slug": "1381-mass-fear",
+      "level": "Lv. 1",
+      "description": "Frightens nearby enemies into fleeing.",
+      "url": "https://mw2.wiki/lu4/skill/1381-mass-fear/1"
+    },
+    {
+      "name": "Mass Gloom",
+      "slug": "1382-mass-gloom",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage around an enemy. Power: 33.\nApplies to enemy:\nM. Def. -15%\nResistance to all elements -6%.",
+      "url": "https://mw2.wiki/lu4/skill/1382-mass-gloom/1"
+    },
+    {
+      "name": "Vampiric Mist",
+      "slug": "1495-vampiric-mist",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage around user. Power: 81.\nAbsorbs 20% of damage as HP.\nApplies to enemy:\nP. Atk. -20%\nM. Atk. -20%\nAtk. Spd. -8%\nCast. Spd. -8%\nSpeed -20%\nAccuracy -6.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/1495-vampiric-mist/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Arcane Power",
+      "slug": "337-arcane-power",
+      "level": "Lv. 1",
+      "description": "M. Atk. +30%\nM. Skills MP Consumption +10%.\nConsumes 35 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/337-arcane-power/1"
+    },
+    {
+      "name": "Transfer Pain",
+      "slug": "1262-transfer-pain",
+      "level": "Lv. 1",
+      "description": "Transfers 10% of received damage to a servitor. MP is continuously consumed proportional to user's level.",
+      "url": "https://mw2.wiki/lu4/skill/1262-transfer-pain/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    },
+    {
+      "name": "Breath of Death",
+      "slug": "24534-breath-of-death",
+      "level": "Lv. 1",
+      "description": "When using 'Death Spike' against enemy with 4 stacks of 'Shadow of Death', inflicts magic damage around enemy. Power: 41.\nRemoves 'Shadow of Death'.",
+      "url": "https://mw2.wiki/lu4/skill/24534-breath-of-death/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Spell Mastery",
+      "slug": "331-spell-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's INT, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/331-spell-mastery/1"
+    },
+    {
+      "name": "Necromancy",
+      "slug": "434-necromancy",
+      "level": "Lv. 1",
+      "description": "M. Atk. +2%\nResistance to Dark +3%.",
+      "url": "https://mw2.wiki/lu4/skill/434-necromancy/1"
+    },
+    {
+      "name": "PvE Clarity",
+      "slug": "24326-pve-clarity",
+      "level": "Lv. 1",
+      "description": "Single target's M. Skills MP Consumption in PvE only: -30%.",
+      "url": "https://mw2.wiki/lu4/skill/24326-pve-clarity/1"
+    },
+    {
+      "name": "Shadow of Death",
+      "slug": "24532-shadow-of-death",
+      "level": "Lv. 1",
+      "description": "When using 'Death Spike', applies 'Shadow of Death' to enemy.\nEffect stacks up to 4 times.\nDuration of each stack: 5 sec.",
+      "url": "https://mw2.wiki/lu4/skill/24532-shadow-of-death/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Magician's Movement",
+      "slug": "118-magicians-movement",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nAtk. Spd. -20%.",
+      "url": "https://mw2.wiki/lu4/skill/118-magicians-movement/1"
+    },
+    {
+      "name": "Spellcraft",
+      "slug": "163-spellcraft",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nCast. Spd. -50%.",
+      "url": "https://mw2.wiki/lu4/skill/163-spellcraft/1"
+    },
+    {
+      "name": "Mana Recovery",
+      "slug": "214-mana-recovery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/214-mana-recovery/1"
+    },
+    {
+      "name": "Robe Mastery",
+      "slug": "234-robe-mastery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nP. Def. +2\nM. Def. +1%.",
+      "url": "https://mw2.wiki/lu4/skill/234-robe-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "244-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +6.7.",
+      "url": "https://mw2.wiki/lu4/skill/244-armor-mastery/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "249-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 1.5 and M. Atk. by 1.9.",
+      "url": "https://mw2.wiki/lu4/skill/249-weapon-mastery/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    },
+    {
+      "name": "Wizard's Ward",
+      "slug": "24432-wizards-ward",
+      "level": "Lv. 1",
+      "description": "When your Shield Block is triggered, 33% chance:\nP. Crit. Def. +6%.\nDuration: 10 sec.\nReuse time: 30 sec.",
+      "url": "https://mw2.wiki/lu4/skill/24432-wizards-ward/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Anti Magic",
+      "slug": "146-anti-magic",
+      "level": "Lv. 1",
+      "description": "M. Def. +10.",
+      "url": "https://mw2.wiki/lu4/skill/146-anti-magic/1"
+    },
+    {
+      "name": "Quick Recycle",
+      "slug": "164-quick-recycle",
+      "level": "Lv. 1",
+      "description": "Decreases Reuse Delay for magic by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/164-quick-recycle/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Fast HP Recovery",
+      "slug": "212-fast-hp-recovery",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/212-fast-hp-recovery/1"
+    },
+    {
+      "name": "Boost Mana",
+      "slug": "213-boost-mana",
+      "level": "Lv. 1",
+      "description": "Increases Max MP by 30.",
+      "url": "https://mw2.wiki/lu4/skill/213-boost-mana/1"
+    },
+    {
+      "name": "Fast Spell Casting",
+      "slug": "228-fast-spell-casting",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/228-fast-spell-casting/1"
+    },
+    {
+      "name": "Fast Mana Recovery",
+      "slug": "229-fast-mana-recovery",
+      "level": "Lv. 1",
+      "description": "Increases MP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/229-fast-mana-recovery/1"
+    },
+    {
+      "name": "Higher Mana Gain",
+      "slug": "285-higher-mana-gain",
+      "level": "Lv. 1",
+      "description": "Additionally increases recovery +22 MP when used Recharge skill.",
+      "url": "https://mw2.wiki/lu4/skill/285-higher-mana-gain/1"
+    },
+    {
+      "name": "Wisdom",
+      "slug": "328-wisdom",
+      "level": "Lv. 1",
+      "description": "Resistance to Hold +10%\nResistance to Sleep +10%\nResistance to Mental attacks +10%.",
+      "url": "https://mw2.wiki/lu4/skill/328-wisdom/1"
+    },
+    {
+      "name": "Health",
+      "slug": "329-health",
+      "level": "Lv. 1",
+      "description": "Resistance to Poison +10%\nResistance to Bleeding +10%.",
+      "url": "https://mw2.wiki/lu4/skill/329-health/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Fighter's Will",
+      "slug": "758-fighters-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nP. Skills Power +5%\nP. Crit. Rate +5%.\nWith short-range weapon:\nP. Atk. +5%\nAtk. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/758-fighters-will/1"
+    },
+    {
+      "name": "Archer's Will",
+      "slug": "759-archers-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nSpeed +2\nAccuracy +3.\nOnly with Bow:\nP. Atk. +5%\nSkills Range +5%\nAttack Range +50.",
+      "url": "https://mw2.wiki/lu4/skill/759-archers-will/1"
+    },
+    {
+      "name": "Magician's Will",
+      "slug": "945-magicians-will",
+      "level": "Lv. 1",
+      "description": "M. Atk. +5%\nCast. Spd. +5%\nM. Crit. Rate +5%\nAll skills MP Consumption -5%.",
+      "url": "https://mw2.wiki/lu4/skill/945-magicians-will/1"
+    },
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ]
+}

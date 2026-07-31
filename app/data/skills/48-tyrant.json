@@ -1,0 +1,428 @@
+{
+  "Physical": [
+    {
+      "name": "Force Burst",
+      "slug": "17-force-burst",
+      "level": "Lv. 1",
+      "description": "Supplements the user's P. Atk. with 129 Power in a powerful burst of energy.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/17-force-burst/1"
+    },
+    {
+      "name": "Force Storm",
+      "slug": "35-force-storm",
+      "level": "Lv. 1",
+      "description": "Supplements the user's P. Atk. with 181 Power in a powerful indirect energy blast.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/35-force-storm/1"
+    },
+    {
+      "name": "Focused Force",
+      "slug": "50-focused-force",
+      "level": "Lv. 1",
+      "description": "Channels force energy when using a hand-to-hand and blunt weapon. Can be charged up to Level 1.",
+      "url": "https://mw2.wiki/lu4/skill/50-focused-force/1"
+    },
+    {
+      "name": "Force Blaster",
+      "slug": "54-force-blaster",
+      "level": "Lv. 1",
+      "description": "Discharges a powerful energy beam at an enemy with 143 Power added to P. Atk.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/54-force-blaster/1"
+    },
+    {
+      "name": "Punch of Doom",
+      "slug": "81-punch-of-doom",
+      "level": "Lv. 1",
+      "description": "Inflicts great damage with 4580 Power on the opponent with iron-fist. Ignores Shield Defence. Over-hit. Critical",
+      "url": "https://mw2.wiki/lu4/skill/81-punch-of-doom/1"
+    },
+    {
+      "name": "Burning Fist",
+      "slug": "280-burning-fist",
+      "level": "Lv. 1",
+      "description": "Hurls a Fire type iron-fist to attack the target with 517 Power added to P. Atk.\nIgnores Shield Defence.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/280-burning-fist/1"
+    },
+    {
+      "name": "Hurricane Assault",
+      "slug": "284-hurricane-assault",
+      "level": "Lv. 1",
+      "description": "Supplements the user's P. Atk. with 501 Power to strike the target with rapid consecutive strikes.\nIgnores Shield Defence.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/284-hurricane-assault/1"
+    },
+    {
+      "name": "Raging Force",
+      "slug": "346-raging-force",
+      "level": "Lv. 1",
+      "description": "Attacks the enemy.\nEnergy Charges can be gathered up to stage 4.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/346-raging-force/1"
+    },
+    {
+      "name": "Break Duress",
+      "slug": "461-break-duress",
+      "level": "Lv. 1",
+      "description": "Use your spirit to escape from an immobile state.",
+      "url": "https://mw2.wiki/lu4/skill/461-break-duress/1"
+    },
+    {
+      "name": "Maximum Focus Force",
+      "slug": "918-maximum-focus-force",
+      "level": "Lv. 1",
+      "description": "Immediately grants maximum Energy Charges.",
+      "url": "https://mw2.wiki/lu4/skill/918-maximum-focus-force/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Bear Spirit Totem",
+      "slug": "76-bear-spirit-totem",
+      "level": "Lv. 1",
+      "description": "With Dual Fist, Sword, Blunt/Dual Blunt:\nP. Atk. +20%\nP. Crit. Damage +20%.\nSpeed -30%.",
+      "url": "https://mw2.wiki/lu4/skill/76-bear-spirit-totem/1"
+    },
+    {
+      "name": "Wolf Spirit Totem",
+      "slug": "83-wolf-spirit-totem",
+      "level": "Lv. 1",
+      "description": "Speed +20%\nWith Dual Fist, Sword, Blunt/Dual Blunt:\nAccuracy +3.",
+      "url": "https://mw2.wiki/lu4/skill/83-wolf-spirit-totem/1"
+    },
+    {
+      "name": "Ogre Spirit Totem",
+      "slug": "109-ogre-spirit-totem",
+      "level": "Lv. 1",
+      "description": "P. Def. +30%\nM. Def. +30%.\nWith Dual Fist:\nP. Atk. +30%\nP. Crit. Damage +10%.",
+      "url": "https://mw2.wiki/lu4/skill/109-ogre-spirit-totem/1"
+    },
+    {
+      "name": "Puma Spirit Totem",
+      "slug": "282-puma-spirit-totem",
+      "level": "Lv. 1",
+      "description": "With Dual Fist, Sword, Blunt/Dual Blunt:\nAtk. Spd. +20%\nAccuracy +6.",
+      "url": "https://mw2.wiki/lu4/skill/282-puma-spirit-totem/1"
+    },
+    {
+      "name": "Bison Spirit Totem",
+      "slug": "292-bison-spirit-totem",
+      "level": "Lv. 1",
+      "description": "With Dual Fist, Sword, Blunt/Dual Blunt:\nAccuracy +6.\nWhen HP < 60%:\nP. Atk. +10%\nP. Crit. Rate +100.\nWhen HP < 30%:\nP. Atk. +30%\nP. Crit. Rate +300.",
+      "url": "https://mw2.wiki/lu4/skill/292-bison-spirit-totem/1"
+    },
+    {
+      "name": "Rabbit Spirit Totem",
+      "slug": "298-rabbit-spirit-totem",
+      "level": "Lv. 1",
+      "description": "With Dual Fist:\nAtk. Spd. +30%.\nWith Light Armor:\nSpeed +25%\nEvasion +12.",
+      "url": "https://mw2.wiki/lu4/skill/298-rabbit-spirit-totem/1"
+    },
+    {
+      "name": "Zealot",
+      "slug": "420-zealot",
+      "level": "Lv. 1",
+      "description": "Speed +10\nP. Skills MP Consumption -50%\nResistance to debuffs +80%\nResistance to buff-canceling attacks +40%\nIncoming Heal Power -50%.\nWith Sword, Blunt, Fists, Polearm:\nAccuracy +6\nAtk. Spd. +10%.\nWith Sword, Polearm:\nP. Crit. Rate +33.\nWith Blunt, Fists:\nP. Crit. Damage +33%.",
+      "url": "https://mw2.wiki/lu4/skill/420-zealot/1"
+    },
+    {
+      "name": "Dark Form",
+      "slug": "423-dark-form",
+      "level": "Lv. 1",
+      "description": "Fire Atk. Attribute. Resistance to Fire +3%.",
+      "url": "https://mw2.wiki/lu4/skill/423-dark-form/1"
+    },
+    {
+      "name": "Hawk Spirit Totem",
+      "slug": "425-hawk-spirit-totem",
+      "level": "Lv. 1",
+      "description": "With Dual Fist, Sword, Blunt/Dual Blunt:\nAccuracy +6.\nWith Dual Fist, Blunt/Dual Blunt:\nP. Crit. Rate +100\nP. Crit. Damage +30%.",
+      "url": "https://mw2.wiki/lu4/skill/425-hawk-spirit-totem/1"
+    },
+    {
+      "name": "Force Meditation",
+      "slug": "441-force-meditation",
+      "level": "Lv. 1",
+      "description": "Restores 60 HP and 10 MP every second.\nApplies to user:\nP. Def. -80%.\nUser is unable to move.\nEffect is canceled if user is attacked.",
+      "url": "https://mw2.wiki/lu4/skill/441-force-meditation/1"
+    },
+    {
+      "name": "Force Barrier",
+      "slug": "443-force-barrier",
+      "level": "Lv. 1",
+      "description": "Makes user invincible against damage and debuffs.\nEffect is canceled if any action other than movement is initiated.",
+      "url": "https://mw2.wiki/lu4/skill/443-force-barrier/1"
+    },
+    {
+      "name": "Final Secret",
+      "slug": "917-final-secret",
+      "level": "Lv. 1",
+      "description": "Attack Damage in PvP +15%\nP. Skills Power in PvP and PvE +30%.",
+      "url": "https://mw2.wiki/lu4/skill/917-final-secret/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Cripple",
+      "slug": "95-cripple",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Speed by 20%.",
+      "url": "https://mw2.wiki/lu4/skill/95-cripple/1"
+    },
+    {
+      "name": "Soul Breaker",
+      "slug": "281-soul-breaker",
+      "level": "Lv. 1",
+      "description": "Hurls an iron-fist to attack the target with 487 Power added to P. Atk. and inflicts Stun. Ignores Shield Defence. Over-hit. Critical.",
+      "url": "https://mw2.wiki/lu4/skill/281-soul-breaker/1"
+    },
+    {
+      "name": "Pain for Gain",
+      "slug": "28109-pain-for-gain",
+      "level": "Lv. 1",
+      "description": "Reduces HP by 70% and limits HP recovery to no more than 20% of the maximum. Decreases Resistance to Debuff by 30%.",
+      "url": "https://mw2.wiki/lu4/skill/28109-pain-for-gain/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Fury Fists",
+      "slug": "222-fury-fists",
+      "level": "Lv. 1",
+      "description": "Atk. Spd. +25%. Consumes 12 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/222-fury-fists/1"
+    },
+    {
+      "name": "Relax",
+      "slug": "226-relax",
+      "level": "Lv. 1",
+      "description": "Sits down to rest. HP Regeneration +5.\nConsumes 1 MP per second.\nUse /stand to stop resting.",
+      "url": "https://mw2.wiki/lu4/skill/226-relax/1"
+    },
+    {
+      "name": "Fortitude",
+      "slug": "335-fortitude",
+      "level": "Lv. 1",
+      "description": "Resistance to Paralyze +30%\nResistance to Stun +30%.\nContinuously consumes MP proportionately to the user's level.",
+      "url": "https://mw2.wiki/lu4/skill/335-fortitude/1"
+    },
+    {
+      "name": "Riposte Stance",
+      "slug": "340-riposte-stance",
+      "level": "Lv. 1",
+      "description": "Returns 20% of received standard short-range damage back to an enemy\nReflects debuffs with 20% probability\nSpeed -5%\nAtk. Spd. -10%\nAccuracy -3.\nContinuously consumes MP proportionately to the user's level.",
+      "url": "https://mw2.wiki/lu4/skill/340-riposte-stance/1"
+    },
+    {
+      "name": "War Frenzy",
+      "slug": "424-war-frenzy",
+      "level": "Lv. 1",
+      "description": "Resistance to Stun +5% Resistance to Sleep +10%. Continuously consumes MP proportionately to the user's level.",
+      "url": "https://mw2.wiki/lu4/skill/424-war-frenzy/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    },
+    {
+      "name": "Asceticism",
+      "slug": "24544-asceticism",
+      "level": "Lv. 1",
+      "description": "While this skill is active, Vampiric-type effects do not restore your health.",
+      "url": "https://mw2.wiki/lu4/skill/24544-asceticism/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Skill Mastery",
+      "slug": "330-skill-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's STR, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/330-skill-mastery/1"
+    },
+    {
+      "name": "Master of Combat",
+      "slug": "430-master-of-combat",
+      "level": "Lv. 1",
+      "description": "Max CP +3%\nP. Atk. with Sword/Dual Sword, Blunt/Dual Blunt, Polearm, Dual Fist +25.",
+      "url": "https://mw2.wiki/lu4/skill/430-master-of-combat/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Weapon Mastery",
+      "slug": "141-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 8.5% and additionally by 2.",
+      "url": "https://mw2.wiki/lu4/skill/141-weapon-mastery/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "142-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +9 and MP Recovery Bonus by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/142-armor-mastery/1"
+    },
+    {
+      "name": "Fist Weapon Mastery",
+      "slug": "210-fist-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 4.5 when using a hand-to-hand weapon.",
+      "url": "https://mw2.wiki/lu4/skill/210-fist-weapon-mastery/1"
+    },
+    {
+      "name": "Light Armor Mastery",
+      "slug": "233-light-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Light Armor:\nP. Def. +1\nEvasion +4\nReceived P. Crit. Rate -15%.",
+      "url": "https://mw2.wiki/lu4/skill/233-light-armor-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Sword/Blunt Weapon Mastery",
+      "slug": "257-swordblunt-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 4.5 when using one-handed/two-handed Sword or one-handed/two-handed/dual Blunt weapon.",
+      "url": "https://mw2.wiki/lu4/skill/257-swordblunt-weapon-mastery/1"
+    },
+    {
+      "name": "Two-handed Weapon Mastery",
+      "slug": "293-two-handed-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 4.5 and Accuracy by 3 when using a two-handed sword or a two-handed blunt weapon.",
+      "url": "https://mw2.wiki/lu4/skill/293-two-handed-weapon-mastery/1"
+    },
+    {
+      "name": "Agile Movement",
+      "slug": "319-agile-movement",
+      "level": "Lv. 1",
+      "description": "Accuracy +2 and Speed by 5 when equipped with light armor.",
+      "url": "https://mw2.wiki/lu4/skill/319-agile-movement/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Toughness",
+      "slug": "134-toughness",
+      "level": "Lv. 1",
+      "description": "Resistance to Sleep/Hold/Poison +20%.",
+      "url": "https://mw2.wiki/lu4/skill/134-toughness/1"
+    },
+    {
+      "name": "Boost Attack Speed",
+      "slug": "168-boost-attack-speed",
+      "level": "Lv. 1",
+      "description": "Atk. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/168-boost-attack-speed/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Wisdom",
+      "slug": "328-wisdom",
+      "level": "Lv. 1",
+      "description": "Resistance to Hold +10%\nResistance to Sleep +10%\nResistance to Mental attacks +10%.",
+      "url": "https://mw2.wiki/lu4/skill/328-wisdom/1"
+    },
+    {
+      "name": "Health",
+      "slug": "329-health",
+      "level": "Lv. 1",
+      "description": "Resistance to Poison +10%\nResistance to Bleeding +10%.",
+      "url": "https://mw2.wiki/lu4/skill/329-health/1"
+    },
+    {
+      "name": "Armor Destruction",
+      "slug": "31442-armor-destruction",
+      "level": "Lv. 1",
+      "description": "Ordinary attacks have a 50% chance to apply to enemy:\nResistance to Dual Fist attacks -3%.\nDuration: 10 sec.",
+      "url": "https://mw2.wiki/lu4/skill/31442-armor-destruction/1"
+    }
+  ],
+  "Occupation": [
+    {
+      "name": "Iron Body",
+      "slug": "295-iron-body",
+      "level": "Lv. 1",
+      "description": "Environment-related damage is decreased by 40%.",
+      "url": "https://mw2.wiki/lu4/skill/295-iron-body/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Fighter's Will",
+      "slug": "758-fighters-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nP. Skills Power +5%\nP. Crit. Rate +5%.\nWith short-range weapon:\nP. Atk. +5%\nAtk. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/758-fighters-will/1"
+    },
+    {
+      "name": "Archer's Will",
+      "slug": "759-archers-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nSpeed +2\nAccuracy +3.\nOnly with Bow:\nP. Atk. +5%\nSkills Range +5%\nAttack Range +50.",
+      "url": "https://mw2.wiki/lu4/skill/759-archers-will/1"
+    },
+    {
+      "name": "Expose Weak Point",
+      "slug": "767-expose-weak-point",
+      "level": "Lv. 1",
+      "description": "When attacked, 5% chance apply to enemy:\nP. Def. -20%\nReceived P. Crit. Rate +30%.\nDuration: 15 sec.\nReuse time: 30 sec.",
+      "url": "https://mw2.wiki/lu4/skill/767-expose-weak-point/1"
+    },
+    {
+      "name": "Magician's Will",
+      "slug": "945-magicians-will",
+      "level": "Lv. 1",
+      "description": "M. Atk. +5%\nCast. Spd. +5%\nM. Crit. Rate +5%\nAll skills MP Consumption -5%.",
+      "url": "https://mw2.wiki/lu4/skill/945-magicians-will/1"
+    },
+    {
+      "name": "Force Mastery",
+      "slug": "993-force-mastery",
+      "level": "Lv. 1",
+      "description": "Absorbs the target's energy. Energy can be absorbed with a 15% chance for regular physical attacks and 30% during a critical attack. Applies when a hand-to-hand combat weapon is equipped. Up to 1 stage of energy can be absorbed.",
+      "url": "https://mw2.wiki/lu4/skill/993-force-mastery/1"
+    },
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    },
+    {
+      "name": "Knock",
+      "slug": "27984-knock",
+      "level": "Lv. 1",
+      "description": "When using 'Rush', 'Assault', 'Charge', 'Blazing Boost', applies to enemy:\nSpeed -50%.",
+      "url": "https://mw2.wiki/lu4/skill/27984-knock/1"
+    }
+  ]
+}

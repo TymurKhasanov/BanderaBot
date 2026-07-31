@@ -142,21 +142,21 @@ async def category_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("skill:"))
 async def skill_selected(callback: CallbackQuery):
-    _, race, class_slug, skill_type, category, skill_slug = callback.data.split(
-        ":",
-        5,
-    )
+    _, race, class_slug, skill_slug = callback.data.split(":", 3)
 
     skills = get_skills(class_slug)
 
-    skill = next(
-        (
-            s
-            for s in skills.get(category, [])
-            if s["slug"] == skill_slug
-        ),
-        None,
-    )
+    skill = None
+    category = None
+
+    for cat, items in skills.items():
+        for s in items:
+            if s["slug"] == skill_slug:
+                skill = s
+                category = cat
+                break
+        if skill:
+            break
 
     if skill is None:
         await callback.answer(
@@ -164,6 +164,12 @@ async def skill_selected(callback: CallbackQuery):
             show_alert=True,
         )
         return
+
+    skill_type = (
+        "active"
+        if category in ACTIVE_CATEGORIES
+        else "passive"
+    )
 
     text = (
         f"⚔️ <b>{skill['name']}</b>\n"

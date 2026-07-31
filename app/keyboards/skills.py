@@ -69,7 +69,6 @@ def categories_keyboard(
     slug: str,
     skill_type: str,
 ) -> InlineKeyboardMarkup:
-
     icons = {
         "Physical": "⚔️",
         "Magical": "🔮",
@@ -114,17 +113,20 @@ def skills_keyboard(
     skill_type: str,
     category: str,
 ) -> InlineKeyboardMarkup:
-
     keyboard = []
 
     for skill in skills:
         level = f" ({skill['level']})" if skill["level"] else ""
 
+        callback = f"skill:{race}:{slug}:{skill['slug']}"
+
+        print(len(callback), callback)
+
         keyboard.append(
             [
                 InlineKeyboardButton(
                     text=f"{skill['name']}{level}",
-                    callback_data=f"skill:{race}:{slug}:{skill_type}:{category}:{skill['slug']}",
+                    callback_data=callback,
                 )
             ]
         )
@@ -133,7 +135,7 @@ def skills_keyboard(
         [
             InlineKeyboardButton(
                 text="⬅️ Назад",
-                callback_data=f"cat:{race}:{slug}:{skill_type}:{category}",
+                callback_data=f"type:{race}:{slug}:{skill_type}",
             )
         ]
     )
@@ -148,7 +150,6 @@ def skill_keyboard(
     skill_type: str,
     category: str,
 ) -> InlineKeyboardMarkup:
-
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
