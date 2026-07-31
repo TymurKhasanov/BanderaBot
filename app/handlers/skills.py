@@ -16,14 +16,11 @@ router = Router()
 
 ACTIVE_CATEGORIES = [
     "Physical",
+    "Magical",
     "Buff",
     "Debuff",
     "Toggle",
-    "Special",
     "Item",
-    "Equipment",
-    "Ability",
-    "Additional",
 ]
 
 RACE_TITLES = {
@@ -73,7 +70,6 @@ async def race_selected(callback: CallbackQuery):
 async def class_selected(callback: CallbackQuery):
     _, race, class_slug = callback.data.split(":", 2)
 
-    # загрузит из JSON или скачает один раз
     get_skills(class_slug)
 
     await callback.message.edit_text(
@@ -94,49 +90,49 @@ async def type_selected(callback: CallbackQuery):
     skills = get_skills(class_slug)
 
     if skill_type == "active":
-
         categories = [
             category
-            for category in ACTIVE_CATEGORIES
-            if category in skills
+            for category in skills.keys()
+            if category in ACTIVE_CATEGORIES
         ]
 
-        await callback.message.edit_text(
-            "🟢 <b>Active Skills</b>\n\nОберіть категорію:",
-            reply_markup=categories_keyboard(
-                categories,
-                race,
-                class_slug,
-            ),
-        )
+        title = "🟢 <b>Active Skills</b>\n\nОберіть категорію:"
 
     else:
+        categories = [
+            category
+            for category in skills.keys()
+            if category not in ACTIVE_CATEGORIES
+        ]
 
-        await callback.message.edit_text(
-            "🛡 <b>Passive Skills</b>\n\nОберіть навичку:",
-            reply_markup=skills_keyboard(
-                skills.get("Passive", []),
-                race,
-                class_slug,
-                "Passive",
-            ),
-        )
+        title = "🛡 <b>Passive Skills</b>\n\nОберіть категорію:"
+
+    await callback.message.edit_text(
+        title,
+        reply_markup=categories_keyboard(
+            categories,
+            race,
+            class_slug,
+            skill_type,
+        ),
+    )
 
     await callback.answer()
 
 
 @router.callback_query(F.data.startswith("cat:"))
 async def category_selected(callback: CallbackQuery):
-    _, race, class_slug, category = callback.data.split(":", 3)
+    _, race, class_slug, skill_type, category = callback.data.split(":", 4)
 
     skills = get_skills(class_slug)
 
     await callback.message.edit_text(
         f"📚 <b>{category}</b>\n\nОберіть навичку:",
         reply_markup=skills_keyboard(
-            skills[category],
+            skills.get(category, []),
             race,
             class_slug,
+            skill_type,
             category,
         ),
     )
@@ -146,14 +142,17 @@ async def category_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("skill:"))
 async def skill_selected(callback: CallbackQuery):
-    _, race, class_slug, category, skill_slug = callback.data.split(":", 4)
+    _, race, class_slug, skill_type, category, skill_slug = callback.data.split(
+        ":",
+        5,
+    )
 
     skills = get_skills(class_slug)
 
     skill = next(
         (
             s
-            for s in skills[category]
+            for s in skills.get(category, [])
             if s["slug"] == skill_slug
         ),
         None,
@@ -178,6 +177,7 @@ async def skill_selected(callback: CallbackQuery):
             skill,
             race,
             class_slug,
+            skill_type,
             category,
         ),
     )
