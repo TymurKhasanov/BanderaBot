@@ -1,0 +1,116 @@
+{
+  "Physical": [
+    {
+      "name": "Power Strike",
+      "slug": "3-power-strike",
+      "level": "Lv. 1",
+      "description": "Delivers a powerful blow that strikes the target with 30 Power added to P. Atk.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/3-power-strike/1"
+    },
+    {
+      "name": "Iron Punch",
+      "slug": "29-iron-punch",
+      "level": "Lv. 1",
+      "description": "Attacks an enemy with 34 Power added to P. Atk.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/29-iron-punch/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Relax",
+      "slug": "226-relax",
+      "level": "Lv. 1",
+      "description": "Sits down to rest. HP Regeneration +5.\nConsumes 1 MP per second.\nUse /stand to stop resting.",
+      "url": "https://mw2.wiki/lu4/skill/226-relax/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Weapon Mastery",
+      "slug": "141-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 8.5% and additionally by 2.",
+      "url": "https://mw2.wiki/lu4/skill/141-weapon-mastery/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "142-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +9 and MP Recovery Bonus by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/142-armor-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Toughness",
+      "slug": "134-toughness",
+      "level": "Lv. 1",
+      "description": "Resistance to Sleep/Hold/Poison +20%.",
+      "url": "https://mw2.wiki/lu4/skill/134-toughness/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    }
+  ],
+  "Occupation": [
+    {
+      "name": "Iron Body",
+      "slug": "295-iron-body",
+      "level": "Lv. 1",
+      "description": "Environment-related damage is decreased by 40%.",
+      "url": "https://mw2.wiki/lu4/skill/295-iron-body/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Skill Mastery",
+      "slug": "330-skill-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's STR, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/330-skill-mastery/1"
+    }
+  ]
+}

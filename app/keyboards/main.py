@@ -8,6 +8,9 @@ main_keyboard = ReplyKeyboardMarkup(
             KeyboardButton(text="👹 Епіки"),
         ],
         [
+            KeyboardButton(text="⚔️ Skills"),
+        ],
+        [
             KeyboardButton(text="📢 Оголошення"),
             KeyboardButton(text="📊 ДЦП"),
         ],

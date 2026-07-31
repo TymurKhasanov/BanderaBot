@@ -1,0 +1,309 @@
+{
+  "Physical": [
+    {
+      "name": "Mortal Blow",
+      "slug": "16-mortal-blow",
+      "level": "Lv. 1",
+      "description": "Attacks the target's vital points with 73 Power added to P. Atk.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/16-mortal-blow/1"
+    },
+    {
+      "name": "Unlock",
+      "slug": "27-unlock",
+      "level": "Lv. 1",
+      "description": "Opens Lv. 1 doors with a 30% chance. Also opens treasure chests with a 100% chance.",
+      "url": "https://mw2.wiki/lu4/skill/27-unlock/1"
+    },
+    {
+      "name": "Power Shot",
+      "slug": "56-power-shot",
+      "level": "Lv. 1",
+      "description": "Make a powerful long-distance attack with 65 Power added to P. Atk.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/56-power-shot/1"
+    }
+  ],
+  "Magical": [
+    {
+      "name": "Poison Recovery",
+      "slug": "21-poison-recovery",
+      "level": "Lv. 1",
+      "description": "Cures the user of minor poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/21-poison-recovery/1"
+    },
+    {
+      "name": "Elemental Heal",
+      "slug": "58-elemental-heal",
+      "level": "Lv. 1",
+      "description": "Restores all party members' HP with 71 Power.",
+      "url": "https://mw2.wiki/lu4/skill/58-elemental-heal/1"
+    },
+    {
+      "name": "Cure Bleeding",
+      "slug": "61-cure-bleeding",
+      "level": "Lv. 1",
+      "description": "Heals minor bleeding.",
+      "url": "https://mw2.wiki/lu4/skill/61-cure-bleeding/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Attack Aura",
+      "slug": "77-attack-aura",
+      "level": "Lv. 1",
+      "description": "P. Atk. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/77-attack-aura/1"
+    },
+    {
+      "name": "Defence Aura",
+      "slug": "91-defence-aura",
+      "level": "Lv. 1",
+      "description": "P. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/91-defence-aura/1"
+    },
+    {
+      "name": "Rapid Shot",
+      "slug": "99-rapid-shot",
+      "level": "Lv. 1",
+      "description": "Atk. Spd. with Bow +8%.",
+      "url": "https://mw2.wiki/lu4/skill/99-rapid-shot/1"
+    },
+    {
+      "name": "Ultimate Evasion",
+      "slug": "111-ultimate-evasion",
+      "level": "Lv. 1",
+      "description": "Evasion +20\nChance to evade P./M. Skills +25%\nResistance to buff-canceling attacks +80%.",
+      "url": "https://mw2.wiki/lu4/skill/111-ultimate-evasion/1"
+    },
+    {
+      "name": "Spirit Barrier",
+      "slug": "123-spirit-barrier",
+      "level": "Lv. 1",
+      "description": "Increases the user's M. Def. by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/123-spirit-barrier/1"
+    },
+    {
+      "name": "Sprint",
+      "slug": "230-sprint",
+      "level": "Lv. 1",
+      "description": "Speed +20.",
+      "url": "https://mw2.wiki/lu4/skill/230-sprint/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Charm",
+      "slug": "15-charm",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's aggression toward the user by 132.",
+      "url": "https://mw2.wiki/lu4/skill/15-charm/1"
+    },
+    {
+      "name": "Bleed",
+      "slug": "96-bleed",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Speed by 20%, and inflicts Bleed, causing them to lose 25 HP every second. Inflicts minor damage based on walked distance.",
+      "url": "https://mw2.wiki/lu4/skill/96-bleed/1"
+    },
+    {
+      "name": "Stun Shot",
+      "slug": "101-stun-shot",
+      "level": "Lv. 1",
+      "description": "Supplements the user's P. Atk. with 344 Power to fire an arrow that stuns an enemy.\nOver-hit and target cancel are possible.",
+      "url": "https://mw2.wiki/lu4/skill/101-stun-shot/1"
+    },
+    {
+      "name": "Entangle",
+      "slug": "102-entangle",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Speed by 20%.",
+      "url": "https://mw2.wiki/lu4/skill/102-entangle/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Accuracy",
+      "slug": "256-accuracy",
+      "level": "Lv. 1",
+      "description": "Accuracy +3. Continuously consumes MP proportionately to the user's level.",
+      "url": "https://mw2.wiki/lu4/skill/256-accuracy/1"
+    },
+    {
+      "name": "Vicious Stance",
+      "slug": "312-vicious-stance",
+      "level": "Lv. 1",
+      "description": "Increases Critical Damages by 35. Continuously consumes MP proportionately to the user's level. Just for a Blow skills.",
+      "url": "https://mw2.wiki/lu4/skill/312-vicious-stance/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Long Shot",
+      "slug": "113-long-shot",
+      "level": "Lv. 1",
+      "description": "Bow's Attack Range +200.",
+      "url": "https://mw2.wiki/lu4/skill/113-long-shot/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "141-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 8.5% and additionally by 2.",
+      "url": "https://mw2.wiki/lu4/skill/141-weapon-mastery/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "142-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +9 and MP Recovery Bonus by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/142-armor-mastery/1"
+    },
+    {
+      "name": "Bow Mastery",
+      "slug": "208-bow-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 10 when using a bow.",
+      "url": "https://mw2.wiki/lu4/skill/208-bow-mastery/1"
+    },
+    {
+      "name": "Dagger Mastery",
+      "slug": "209-dagger-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 4 when use dagger/dual dagger.",
+      "url": "https://mw2.wiki/lu4/skill/209-dagger-mastery/1"
+    },
+    {
+      "name": "Light Armor Mastery",
+      "slug": "233-light-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Light Armor:\nP. Def. +1\nEvasion +4\nReceived P. Crit. Rate -15%.",
+      "url": "https://mw2.wiki/lu4/skill/233-light-armor-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    },
+    {
+      "name": "Potential Ability",
+      "slug": "1559-potential-ability",
+      "level": "Lv. 1",
+      "description": "With Light Armor and Dagger/Dual Dagger:\nP. Crit. Rate +15%\nP. Crit. Damage +177.",
+      "url": "https://mw2.wiki/lu4/skill/1559-potential-ability/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Critical Chance",
+      "slug": "137-critical-chance",
+      "level": "Lv. 1",
+      "description": "Increases Critical Rate by 20%.",
+      "url": "https://mw2.wiki/lu4/skill/137-critical-chance/1"
+    },
+    {
+      "name": "Quick Step",
+      "slug": "169-quick-step",
+      "level": "Lv. 1",
+      "description": "Speed +7.",
+      "url": "https://mw2.wiki/lu4/skill/169-quick-step/1"
+    },
+    {
+      "name": "Esprit",
+      "slug": "171-esprit",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 2.5 and MP Recovery Bonus by 1.8 when running.",
+      "url": "https://mw2.wiki/lu4/skill/171-esprit/1"
+    },
+    {
+      "name": "Acrobatics",
+      "slug": "173-acrobatics",
+      "level": "Lv. 1",
+      "description": "Increases the maximum height user can fall without taking damage by 60.",
+      "url": "https://mw2.wiki/lu4/skill/173-acrobatics/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Boost Breath",
+      "slug": "195-boost-breath",
+      "level": "Lv. 1",
+      "description": "Increases lung capacity by 180.",
+      "url": "https://mw2.wiki/lu4/skill/195-boost-breath/1"
+    },
+    {
+      "name": "Boost Evasion",
+      "slug": "198-boost-evasion",
+      "level": "Lv. 1",
+      "description": "Increases Evasion by 2.",
+      "url": "https://mw2.wiki/lu4/skill/198-boost-evasion/1"
+    },
+    {
+      "name": "Acrobatic Move",
+      "slug": "225-acrobatic-move",
+      "level": "Lv. 1",
+      "description": "Increases Evasion by 4 when running.",
+      "url": "https://mw2.wiki/lu4/skill/225-acrobatic-move/1"
+    },
+    {
+      "name": "Critical Bleed",
+      "slug": "31189-critical-bleed",
+      "level": "Lv. 1",
+      "description": "During standard melee attacks, 10% chance to apply Bleed Lv. 1.",
+      "url": "https://mw2.wiki/lu4/skill/31189-critical-bleed/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Skill Mastery",
+      "slug": "330-skill-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's STR, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/330-skill-mastery/1"
+    },
+    {
+      "name": "Silent Mind",
+      "slug": "946-silent-mind",
+      "level": "Lv. 1",
+      "description": "MP Consumption for bow shots -25%.",
+      "url": "https://mw2.wiki/lu4/skill/946-silent-mind/1"
+    }
+  ]
+}

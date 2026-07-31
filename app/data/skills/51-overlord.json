@@ -1,0 +1,584 @@
+{
+  "Physical": [
+    {
+      "name": "Burning Chop",
+      "slug": "927-burning-chop",
+      "level": "Lv. 1",
+      "description": "Fire attacks enemies in front with 167 Power added to P. Atk., causes burns, and makes them consume 43 HP every second. Cannot be used when a bow/crossbow is equipped. Over-hit. Critical.",
+      "url": "https://mw2.wiki/lu4/skill/927-burning-chop/1"
+    },
+    {
+      "name": "Onslaught of Pa'agrio",
+      "slug": "949-onslaught-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Inflicts physical damage around enemy. Power: 1895.\nApplies to enemy:\nBurns 50 HP every second.\nOver-hit and Critical hit are possible.",
+      "url": "https://mw2.wiki/lu4/skill/949-onslaught-of-paagrio/1"
+    }
+  ],
+  "Magical": [
+    {
+      "name": "Seal of Flame",
+      "slug": "1108-seal-of-flame",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage on nearby enemies. Power: 30.\nApplies to enemy:\nBurns 60 HP every sec.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/1108-seal-of-flame/1"
+    },
+    {
+      "name": "Seal of Gloom",
+      "slug": "1210-seal-of-gloom",
+      "level": "Lv. 1",
+      "description": "Burns MP of nearby enemies. Power: 29.\nApplies to enemy:\nBurns 12 MP every sec.",
+      "url": "https://mw2.wiki/lu4/skill/1210-seal-of-gloom/1"
+    },
+    {
+      "name": "Seal of Mirage",
+      "slug": "1213-seal-of-mirage",
+      "level": "Lv. 1",
+      "description": "Throws nearby enemies into chaos, causing them to attack anybody randomly.",
+      "url": "https://mw2.wiki/lu4/skill/1213-seal-of-mirage/1"
+    },
+    {
+      "name": "Chant of Life",
+      "slug": "1229-chant-of-life",
+      "level": "Lv. 1",
+      "description": "Recovers all party members HP by 5%. Recovers 12 HP per second for all party members.",
+      "url": "https://mw2.wiki/lu4/skill/1229-chant-of-life/1"
+    },
+    {
+      "name": "Steal Essence",
+      "slug": "1245-steal-essence",
+      "level": "Lv. 1",
+      "description": "Inflicts non-Attribute damage on an enemy with 52 Power added to M. Atk. Absorbs 80% of the damage as HP.",
+      "url": "https://mw2.wiki/lu4/skill/1245-steal-essence/1"
+    },
+    {
+      "name": "Heart of Pa'agrio",
+      "slug": "1256-heart-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Restores a clan member's HP with 91 Power and recovers 31 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/1256-heart-of-paagrio/1"
+    },
+    {
+      "name": "Honor of Pa'agrio",
+      "slug": "1305-honor-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Restores 500 CP to nearby party/alliance members.",
+      "url": "https://mw2.wiki/lu4/skill/1305-honor-of-paagrio/1"
+    },
+    {
+      "name": "Ritual of Life",
+      "slug": "1306-ritual-of-life",
+      "level": "Lv. 1",
+      "description": "Restores 750 CP.\nCan be applied only to your character or party member.",
+      "url": "https://mw2.wiki/lu4/skill/1306-ritual-of-life/1"
+    },
+    {
+      "name": "Curse of Pa'agrio",
+      "slug": "28016-curse-of-paagrio",
+      "level": "Lv. 1",
+      "description": "A curse that deals damage with power starting from 60 and has a chance to trigger a random debuff on each affected target from those available to the character. The assortment of debuffs depends on the level of the skill Curse of Pa'agrio, and the levels of the debuffs depend on their levels in the character.",
+      "url": "https://mw2.wiki/lu4/skill/28016-curse-of-paagrio/1"
+    },
+    {
+      "name": "Ritual of Preserve",
+      "slug": "28023-ritual-of-preserve",
+      "level": "Lv. 1",
+      "description": "Absorbs 1200 damage.\nAll Skills Hit Time -15%\nResistance to Mana Burn +50%.\nCan be applied only to party member.\nCan't be used for 30 sec after joining a party.\nEffect only works while in a party with the caster.",
+      "url": "https://mw2.wiki/lu4/skill/28023-ritual-of-preserve/1"
+    },
+    {
+      "name": "Life Impact",
+      "slug": "31155-life-impact",
+      "level": "Lv. 1",
+      "description": "Recovers 15% HP instantly to target under 'Chant of Life' or 'Heart of Pa'agrio'.\nRemoves 'Chant of Life' and 'Heart of Pa'agrio'.",
+      "url": "https://mw2.wiki/lu4/skill/31155-life-impact/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Wisdom of Pa'agrio",
+      "slug": "1004-wisdom-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For party and clan members:\nCast. Spd. +25%.",
+      "url": "https://mw2.wiki/lu4/skill/1004-wisdom-of-paagrio/1"
+    },
+    {
+      "name": "Vision of Pa'agrio",
+      "slug": "1249-vision-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For party and clan members:\nAccuracy +2.",
+      "url": "https://mw2.wiki/lu4/skill/1249-vision-of-paagrio/1"
+    },
+    {
+      "name": "Protection Shield of Pa'agrio",
+      "slug": "1250-protection-shield-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For party members:\nP. Def. +5%\nReceived P. Crit. Damage -5%.\nEffect only works while in a party with the caster.\nOnly one of these effects can be active at a time: 'Counter Critical', 'Chant of Protection Spirit', 'Protection Shield of Pa'agrio', any 'Greater Shield', or 'Earth Chant'/'Earth Motive'.",
+      "url": "https://mw2.wiki/lu4/skill/1250-protection-shield-of-paagrio/1"
+    },
+    {
+      "name": "Rage of Pa'agrio",
+      "slug": "1261-rage-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Decreases nearby clan members' P. Def. by 6%, M. Def. by 12%, and Evasion by 2, and increases P. Atk. by 6%, M. Atk. by 12%, Atk. Spd. by 6%, Cast. Spd. by 6%, and Speed by 6.",
+      "url": "https://mw2.wiki/lu4/skill/1261-rage-of-paagrio/1"
+    },
+    {
+      "name": "Victory of Pa'agrio",
+      "slug": "1414-victory-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For Party and Alliance Members:\nMax CP +20%\nMax MP +20%\nCP Regeneration +20%\nP. Skills Power +5%\nP. Atk. +5%\nP. Def. +10%\nAtk. Spd. +8%\nP. Crit. Rate +15%\nM. Atk. +10%\nM. Def. +10%\nCast. Spd. +8%\nM. Crit. Damage +10%\nResistance to debuffs +10%\nSpeed -10%.",
+      "url": "https://mw2.wiki/lu4/skill/1414-victory-of-paagrio/1"
+    },
+    {
+      "name": "Emblem of Pa'agrio",
+      "slug": "1415-emblem-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For clan members:\nResistance to buff-canceling attacks +20%\nResistance to debuffs +12%.",
+      "url": "https://mw2.wiki/lu4/skill/1415-emblem-of-paagrio/1"
+    },
+    {
+      "name": "Fist of Pa'agrio",
+      "slug": "1416-fist-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Nearby party members' CP regeneration +50% and Max CP +10%. CP recovery efficiency with 'Honor of Pa'agrio' skill, CP Potions and Elixirs +10%.",
+      "url": "https://mw2.wiki/lu4/skill/1416-fist-of-paagrio/1"
+    },
+    {
+      "name": "Flames of Invincibility",
+      "slug": "1427-flames-of-invincibility",
+      "level": "Lv. 1",
+      "description": "Makes nearby party/alliance members invincible against damage and debuffs.\nThis effect is canceled if any action other than movement is initiated.\nCan't be applied more than once every 600 seconds.",
+      "url": "https://mw2.wiki/lu4/skill/1427-flames-of-invincibility/1"
+    },
+    {
+      "name": "Enlightenment",
+      "slug": "1533-enlightenment",
+      "level": "Lv. 1",
+      "description": "M. Atk. +10%\nCast. Spd. +30%\nIncoming Heal Power +40%\nM. Crit. Rate +50%\nM. Skills MP Consumption -90%.",
+      "url": "https://mw2.wiki/lu4/skill/1533-enlightenment/1"
+    },
+    {
+      "name": "Combat of Pa'agrio",
+      "slug": "1536-combat-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nFor party and clan members:\nP. Atk. +11%\nP. Def. +11%.",
+      "url": "https://mw2.wiki/lu4/skill/1536-combat-of-paagrio/1"
+    },
+    {
+      "name": "Critical of Pa'agrio",
+      "slug": "1537-critical-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Focus' and 'Death Whisper' effects.\nFor party and clan members:\nP. Crit. Rate +18%\nP. Crit. Damage +23%.",
+      "url": "https://mw2.wiki/lu4/skill/1537-critical-of-paagrio/1"
+    },
+    {
+      "name": "Condition of Pa'agrio",
+      "slug": "1538-condition-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Bless the Body' and 'Bless the Soul' effects.\nFor party and clan members:\nMax HP +12%\nMax MP +12%.",
+      "url": "https://mw2.wiki/lu4/skill/1538-condition-of-paagrio/1"
+    },
+    {
+      "name": "Movement of Pa'agrio",
+      "slug": "24540-movement-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Wind Walk' and 'Agility' effects.\nFor party and clan members:\nSpeed +33\nEvasion +3.",
+      "url": "https://mw2.wiki/lu4/skill/24540-movement-of-paagrio/1"
+    },
+    {
+      "name": "Rampage of Pa'agrio",
+      "slug": "24541-rampage-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Haste' and 'Vampiric Rage' effects.\nFor party and clan members:\nAtk. Spd. +21%\nRecovers as HP 6% of melee damage dealt.",
+      "url": "https://mw2.wiki/lu4/skill/24541-rampage-of-paagrio/1"
+    },
+    {
+      "name": "Magic of Pa'agrio",
+      "slug": "24543-magic-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Combines 'Empower' and 'Magic Barrier' effects.\nFor party and clan members:\nM. Atk. +45%\nM. Def. +18%.",
+      "url": "https://mw2.wiki/lu4/skill/24543-magic-of-paagrio/1"
+    },
+    {
+      "name": "Legacy of Pa'agrio",
+      "slug": "30029-legacy-of-paagrio",
+      "level": "Lv. 1",
+      "description": "For Party Members:\nMax HP +10%\nP. Skills Power +3%\nP. Atk. +3%\nP. Def. +6%\nAtk. Spd. +5%\nP. Crit. Rate +10%\nM. Atk. +6%\nM. Def. +6%\nCast. Spd. +5%\nM. Crit. Damage +6%\nResistance to debuffs +8%\nRecovers as HP 2% of melee damage dealt\nSpeed -10%.",
+      "url": "https://mw2.wiki/lu4/skill/30029-legacy-of-paagrio/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Hammer Crush",
+      "slug": "260-hammer-crush",
+      "level": "Lv. 1",
+      "description": "Supplements the user's P. Atk. with 487 Power to stun an enemy. Ignores Shield Defence.\nOver-hit and Critical hit are possible.\nWhile the effect is active, Resistance to Stun is significantly increased.",
+      "url": "https://mw2.wiki/lu4/skill/260-hammer-crush/1"
+    },
+    {
+      "name": "Fear",
+      "slug": "1092-fear",
+      "level": "Lv. 1",
+      "description": "Frightens an enemy into fleeing.",
+      "url": "https://mw2.wiki/lu4/skill/1092-fear/1"
+    },
+    {
+      "name": "Seal of Chaos",
+      "slug": "1096-seal-of-chaos",
+      "level": "Lv. 1",
+      "description": "Decreases Accuracy of nearby enemies by 9.",
+      "url": "https://mw2.wiki/lu4/skill/1096-seal-of-chaos/1"
+    },
+    {
+      "name": "Dreaming Spirit",
+      "slug": "1097-dreaming-spirit",
+      "level": "Lv. 1",
+      "description": "Causes an enemy to sleep.",
+      "url": "https://mw2.wiki/lu4/skill/1097-dreaming-spirit/1"
+    },
+    {
+      "name": "Seal of Slow",
+      "slug": "1099-seal-of-slow",
+      "level": "Lv. 1",
+      "description": "Decreases Speed of nearby enemies by 20%.",
+      "url": "https://mw2.wiki/lu4/skill/1099-seal-of-slow/1"
+    },
+    {
+      "name": "Seal of Winter",
+      "slug": "1104-seal-of-winter",
+      "level": "Lv. 1",
+      "description": "Decreases Atk. Spd. of nearby enemies by 23%.",
+      "url": "https://mw2.wiki/lu4/skill/1104-seal-of-winter/1"
+    },
+    {
+      "name": "Madness",
+      "slug": "1105-madness",
+      "level": "Lv. 1",
+      "description": "Confuses an enemy into attacking random targets.",
+      "url": "https://mw2.wiki/lu4/skill/1105-madness/1"
+    },
+    {
+      "name": "Seal of Binding",
+      "slug": "1208-seal-of-binding",
+      "level": "Lv. 1",
+      "description": "Holds nearby enemies.",
+      "url": "https://mw2.wiki/lu4/skill/1208-seal-of-binding/1"
+    },
+    {
+      "name": "Seal of Poison",
+      "slug": "1209-seal-of-poison",
+      "level": "Lv. 1",
+      "description": "Poisons nearby enemies, causing loss of 14 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/1209-seal-of-poison/1"
+    },
+    {
+      "name": "Seal of Silence",
+      "slug": "1246-seal-of-silence",
+      "level": "Lv. 1",
+      "description": "Blocks nearby enemies' use of magic.",
+      "url": "https://mw2.wiki/lu4/skill/1246-seal-of-silence/1"
+    },
+    {
+      "name": "Seal of Scourge",
+      "slug": "1247-seal-of-scourge",
+      "level": "Lv. 1",
+      "description": "Blocks nearby enemies' natural HP recovery ability by 100%.",
+      "url": "https://mw2.wiki/lu4/skill/1247-seal-of-scourge/1"
+    },
+    {
+      "name": "Seal of Suspension",
+      "slug": "1248-seal-of-suspension",
+      "level": "Lv. 1",
+      "description": "Decreases nearby enemies' physical/magic skill re-use time by 200%.",
+      "url": "https://mw2.wiki/lu4/skill/1248-seal-of-suspension/1"
+    },
+    {
+      "name": "Seal of Despair",
+      "slug": "1366-seal-of-despair",
+      "level": "Lv. 1",
+      "description": "For nearby enemies:\nAccuracy -3\nP. Atk. -5%\nAtk. Spd. -15%\nCast. Spd. -10%\nP. Crit. Rate -15%\nP. Crit. Damage -15%\nSpeed -10%\nM. Def. -15%.",
+      "url": "https://mw2.wiki/lu4/skill/1366-seal-of-despair/1"
+    },
+    {
+      "name": "Seal of Disease",
+      "slug": "1367-seal-of-disease",
+      "level": "Lv. 1",
+      "description": "For nearby enemies:\nIncoming Heal Power -50%.",
+      "url": "https://mw2.wiki/lu4/skill/1367-seal-of-disease/1"
+    },
+    {
+      "name": "Seal of Blockade",
+      "slug": "1462-seal-of-blockade",
+      "level": "Lv. 1",
+      "description": "Inflicts magic damage on nearby enemies. Power: 80.\nApplies to enemy:\nBlocks ordinary attacks.",
+      "url": "https://mw2.wiki/lu4/skill/1462-seal-of-blockade/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Arcane Power",
+      "slug": "337-arcane-power",
+      "level": "Lv. 1",
+      "description": "M. Atk. +30%\nM. Skills MP Consumption +10%.\nConsumes 35 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/337-arcane-power/1"
+    },
+    {
+      "name": "Soul Cry",
+      "slug": "1001-soul-cry",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 4.5 and consumes 0 MP per second.",
+      "url": "https://mw2.wiki/lu4/skill/1001-soul-cry/1"
+    },
+    {
+      "name": "Soul Guard",
+      "slug": "1283-soul-guard",
+      "level": "Lv. 1",
+      "description": "P. Def. +293.3. Continuously consumes 5 MP.",
+      "url": "https://mw2.wiki/lu4/skill/1283-soul-guard/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Transformation": [
+    {
+      "name": "Turn to Stone",
+      "slug": "1540-turn-to-stone",
+      "level": "Lv. 1",
+      "description": "Petrifies oneself for 8 seconds to avoid incurring damage.",
+      "url": "https://mw2.wiki/lu4/skill/1540-turn-to-stone/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Magician's Movement",
+      "slug": "118-magicians-movement",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nAtk. Spd. -20%.",
+      "url": "https://mw2.wiki/lu4/skill/118-magicians-movement/1"
+    },
+    {
+      "name": "Spellcraft",
+      "slug": "163-spellcraft",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nCast. Spd. -50%.",
+      "url": "https://mw2.wiki/lu4/skill/163-spellcraft/1"
+    },
+    {
+      "name": "Mana Recovery",
+      "slug": "214-mana-recovery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/214-mana-recovery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "250-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 1.5 and M. Atk. by 1.9.\nAbsorb 10% of standard melee damage inflicted on an enemy as MP.",
+      "url": "https://mw2.wiki/lu4/skill/250-weapon-mastery/1"
+    },
+    {
+      "name": "Robe Mastery",
+      "slug": "251-robe-mastery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nP. Def. +12.",
+      "url": "https://mw2.wiki/lu4/skill/251-robe-mastery/1"
+    },
+    {
+      "name": "Light Armor Mastery",
+      "slug": "252-light-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Light Armor:\nP. Def. +13\nCast. Spd. +90%\nAtk. Spd. +25%\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/252-light-armor-mastery/1"
+    },
+    {
+      "name": "Heavy Armor Mastery",
+      "slug": "253-heavy-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Heavy Armor:\nP. Def. +12\nCast. Spd. +80%\nAtk. Spd. +25%\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/253-heavy-armor-mastery/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Toughness",
+      "slug": "134-toughness",
+      "level": "Lv. 1",
+      "description": "Resistance to Sleep/Hold/Poison +20%.",
+      "url": "https://mw2.wiki/lu4/skill/134-toughness/1"
+    },
+    {
+      "name": "Anti Magic",
+      "slug": "146-anti-magic",
+      "level": "Lv. 1",
+      "description": "M. Def. +10.",
+      "url": "https://mw2.wiki/lu4/skill/146-anti-magic/1"
+    },
+    {
+      "name": "Quick Recycle",
+      "slug": "164-quick-recycle",
+      "level": "Lv. 1",
+      "description": "Decreases Reuse Delay for magic by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/164-quick-recycle/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Boost HP",
+      "slug": "211-boost-hp",
+      "level": "Lv. 1",
+      "description": "Increases Max HP by 60.",
+      "url": "https://mw2.wiki/lu4/skill/211-boost-hp/1"
+    },
+    {
+      "name": "Fast HP Recovery",
+      "slug": "212-fast-hp-recovery",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/212-fast-hp-recovery/1"
+    },
+    {
+      "name": "Boost Mana",
+      "slug": "213-boost-mana",
+      "level": "Lv. 1",
+      "description": "Increases Max MP by 30.",
+      "url": "https://mw2.wiki/lu4/skill/213-boost-mana/1"
+    },
+    {
+      "name": "Fast Spell Casting",
+      "slug": "228-fast-spell-casting",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/228-fast-spell-casting/1"
+    },
+    {
+      "name": "Fast Mana Recovery",
+      "slug": "229-fast-mana-recovery",
+      "level": "Lv. 1",
+      "description": "Increases MP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/229-fast-mana-recovery/1"
+    },
+    {
+      "name": "Higher Mana Gain",
+      "slug": "285-higher-mana-gain",
+      "level": "Lv. 1",
+      "description": "Additionally increases recovery +22 MP when used Recharge skill.",
+      "url": "https://mw2.wiki/lu4/skill/285-higher-mana-gain/1"
+    },
+    {
+      "name": "Wisdom",
+      "slug": "328-wisdom",
+      "level": "Lv. 1",
+      "description": "Resistance to Hold +10%\nResistance to Sleep +10%\nResistance to Mental attacks +10%.",
+      "url": "https://mw2.wiki/lu4/skill/328-wisdom/1"
+    },
+    {
+      "name": "Health",
+      "slug": "329-health",
+      "level": "Lv. 1",
+      "description": "Resistance to Poison +10%\nResistance to Bleeding +10%.",
+      "url": "https://mw2.wiki/lu4/skill/329-health/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Fighter's Will",
+      "slug": "758-fighters-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nP. Skills Power +5%\nP. Crit. Rate +5%.\nWith short-range weapon:\nP. Atk. +5%\nAtk. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/758-fighters-will/1"
+    },
+    {
+      "name": "Archer's Will",
+      "slug": "759-archers-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nSpeed +2\nAccuracy +3.\nOnly with Bow:\nP. Atk. +5%\nSkills Range +5%\nAttack Range +50.",
+      "url": "https://mw2.wiki/lu4/skill/759-archers-will/1"
+    },
+    {
+      "name": "Magician's Will",
+      "slug": "945-magicians-will",
+      "level": "Lv. 1",
+      "description": "M. Atk. +5%\nCast. Spd. +5%\nM. Crit. Rate +5%\nAll skills MP Consumption -5%.",
+      "url": "https://mw2.wiki/lu4/skill/945-magicians-will/1"
+    },
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Spell Mastery",
+      "slug": "331-spell-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's INT, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/331-spell-mastery/1"
+    },
+    {
+      "name": "Divine Lore",
+      "slug": "436-divine-lore",
+      "level": "Lv. 1",
+      "description": "M. Skills MP Consumption -3%.",
+      "url": "https://mw2.wiki/lu4/skill/436-divine-lore/1"
+    },
+    {
+      "name": "PvE Clarity",
+      "slug": "24326-pve-clarity",
+      "level": "Lv. 1",
+      "description": "Single target's M. Skills MP Consumption in PvE only: -30%.",
+      "url": "https://mw2.wiki/lu4/skill/24326-pve-clarity/1"
+    },
+    {
+      "name": "Mystic Fury",
+      "slug": "24395-mystic-fury",
+      "level": "Lv. 1",
+      "description": "When using skills 'Heart of Pa'agrio', 'Honor of Pa'agrio', 'Burning Chop', 'Onslaught of Pa'agrio', 'Seal of Gloom', 'Seal of Blockade', 'Seal of Flame', or 'Curse of Pa'agrio', 15% chance for party members:\nM. Atk. +8%\nAll Skills MP Consumption -6%.\nDuration: 10 sec.\nReuse time: 15 sec.",
+      "url": "https://mw2.wiki/lu4/skill/24395-mystic-fury/1"
+    },
+    {
+      "name": "Unity of Pa'agrio",
+      "slug": "27981-unity-of-paagrio",
+      "level": "Lv. 1",
+      "description": "Depending on the number of party members in a large radius - decreases your MP Consumption for P. Skills and M. Skills: 2 members: -10% 3 members: -15% 4 members: -20% 5 members: -25% 6 members: -30% 7 members: -35% 8 members: -40% 9 members: -50%",
+      "url": "https://mw2.wiki/lu4/skill/27981-unity-of-paagrio/1"
+    }
+  ]
+}

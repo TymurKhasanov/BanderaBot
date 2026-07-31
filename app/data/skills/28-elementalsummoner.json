@@ -1,0 +1,489 @@
+{
+  "Magical": [
+    {
+      "name": "Summon Life Cubic",
+      "slug": "67-summon-life-cubic",
+      "level": "Lv. 1",
+      "description": "Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members.",
+      "url": "https://mw2.wiki/lu4/skill/67-summon-life-cubic/1"
+    },
+    {
+      "name": "Summon Smart Cubic",
+      "slug": "782-summon-smart-cubic",
+      "level": "Lv. 1",
+      "description": "Summons Smart Cubic.\nThis Cubic:\nInflicts magic damage on enemy.\nStuns enemy.\nRemoves all debuffs from the master.",
+      "url": "https://mw2.wiki/lu4/skill/782-summon-smart-cubic/1"
+    },
+    {
+      "name": "Heal",
+      "slug": "1011-heal",
+      "level": "Lv. 1",
+      "description": "Restores the target's HP with 50 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1011-heal/1"
+    },
+    {
+      "name": "Cure Poison",
+      "slug": "1012-cure-poison",
+      "level": "Lv. 1",
+      "description": "Cures the target of minor poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/1012-cure-poison/1"
+    },
+    {
+      "name": "Battle Heal",
+      "slug": "1015-battle-heal",
+      "level": "Lv. 1",
+      "description": "Immediately restores the target's HP with 83 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1015-battle-heal/1"
+    },
+    {
+      "name": "Group Heal",
+      "slug": "1027-group-heal",
+      "level": "Lv. 1",
+      "description": "Restores all party members' HP with 66 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1027-group-heal/1"
+    },
+    {
+      "name": "Servitor Recharge",
+      "slug": "1126-servitor-recharge",
+      "level": "Lv. 1",
+      "description": "Recovers the servitor's MP with up to 41 Power depending on the servitor's level.",
+      "url": "https://mw2.wiki/lu4/skill/1126-servitor-recharge/1"
+    },
+    {
+      "name": "Servitor Heal",
+      "slug": "1127-servitor-heal",
+      "level": "Lv. 1",
+      "description": "Recovers the servitor's HP with 169 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1127-servitor-heal/1"
+    },
+    {
+      "name": "Aqua Swirl",
+      "slug": "1175-aqua-swirl",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 23 Power to create a powerful vortex of Water that inflicts Water damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1175-aqua-swirl/1"
+    },
+    {
+      "name": "Wind Strike",
+      "slug": "1177-wind-strike",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 12 Power to create a powerful hurricane that inflicts Wind damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1177-wind-strike/1"
+    },
+    {
+      "name": "Summon Boxer the Unicorn",
+      "slug": "1226-summon-boxer-the-unicorn",
+      "level": "Lv. 1",
+      "description": "Summons Boxer the Unicorn.",
+      "url": "https://mw2.wiki/lu4/skill/1226-summon-boxer-the-unicorn/1"
+    },
+    {
+      "name": "Summon Mirage the Unicorn",
+      "slug": "1227-summon-mirage-the-unicorn",
+      "level": "Lv. 1",
+      "description": "Summons Mirage the Unicorn for assistance in combat.",
+      "url": "https://mw2.wiki/lu4/skill/1227-summon-mirage-the-unicorn/1"
+    },
+    {
+      "name": "Summon Merrow the Unicorn",
+      "slug": "1277-summon-merrow-the-unicorn",
+      "level": "Lv. 1",
+      "description": "Summons the servitor Merrow the Unicorn.",
+      "url": "https://mw2.wiki/lu4/skill/1277-summon-merrow-the-unicorn/1"
+    },
+    {
+      "name": "Summon Aqua Cubic",
+      "slug": "1280-summon-aqua-cubic",
+      "level": "Lv. 1",
+      "description": "Summons Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1280-summon-aqua-cubic/1"
+    },
+    {
+      "name": "Servitor Cure",
+      "slug": "1300-servitor-cure",
+      "level": "Lv. 1",
+      "description": "Cures servitor of minor bleeding or poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/1300-servitor-cure/1"
+    },
+    {
+      "name": "Servitor Blessing",
+      "slug": "1301-servitor-blessing",
+      "level": "Lv. 1",
+      "description": "Frees servitor of Hold, paralysis and decreased Atk. Spd. or movement effects.",
+      "url": "https://mw2.wiki/lu4/skill/1301-servitor-blessing/1"
+    },
+    {
+      "name": "Mass Summon Aqua Cubic",
+      "slug": "1329-mass-summon-aqua-cubic",
+      "level": "Lv. 1",
+      "description": "Summons Aqua Cubic for party members. Aqua Cubic uses attack magic that inflicts continuous damage to an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1329-mass-summon-aqua-cubic/1"
+    },
+    {
+      "name": "Summon Friend",
+      "slug": "1403-summon-friend",
+      "level": "Lv. 1",
+      "description": "Teleports a party member to one's current location. Requires a Summon Crystal on the target.",
+      "url": "https://mw2.wiki/lu4/skill/1403-summon-friend/1"
+    },
+    {
+      "name": "Summon Magnus the Unicorn",
+      "slug": "1407-summon-magnus-the-unicorn",
+      "level": "Lv. 1",
+      "description": "Summon the servitor Magnus the Unicorn.",
+      "url": "https://mw2.wiki/lu4/skill/1407-summon-magnus-the-unicorn/1"
+    },
+    {
+      "name": "Dimension Spiral",
+      "slug": "1558-dimension-spiral",
+      "level": "Lv. 1",
+      "description": "Creates a tear in the dimension to inflict damage on an enemy with 57 Power added to M. Atk.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/1558-dimension-spiral/1"
+    },
+    {
+      "name": "Replace",
+      "slug": "11272-replace",
+      "level": "Lv. 1",
+      "description": "Switches locations with the target servitor. Range: 700 Cooldown: 60 seconds.",
+      "url": "https://mw2.wiki/lu4/skill/11272-replace/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Concentration",
+      "slug": "1078-concentration",
+      "level": "Lv. 1",
+      "description": "Chance to interrupt magic casting -18%.",
+      "url": "https://mw2.wiki/lu4/skill/1078-concentration/1"
+    },
+    {
+      "name": "Servitor Magic Shield",
+      "slug": "1139-servitor-magic-shield",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's M. Def. by 18%.",
+      "url": "https://mw2.wiki/lu4/skill/1139-servitor-magic-shield/1"
+    },
+    {
+      "name": "Servitor Physical Shield",
+      "slug": "1140-servitor-physical-shield",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's P. Def. by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/1140-servitor-physical-shield/1"
+    },
+    {
+      "name": "Servitor Haste",
+      "slug": "1141-servitor-haste",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's Atk. Spd. by 21%.",
+      "url": "https://mw2.wiki/lu4/skill/1141-servitor-haste/1"
+    },
+    {
+      "name": "Bright Servitor",
+      "slug": "1145-bright-servitor",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's M. Atk. by 40%.",
+      "url": "https://mw2.wiki/lu4/skill/1145-bright-servitor/1"
+    },
+    {
+      "name": "Servitor Empowerment",
+      "slug": "1299-servitor-empowerment",
+      "level": "Lv. 1",
+      "description": "Increases the servitor's P. Def. by 1800, M. Def. by 1350, and resistance to buff-canceling attacks by 80%. It is unable to move while the skill is in effect.",
+      "url": "https://mw2.wiki/lu4/skill/1299-servitor-empowerment/1"
+    },
+    {
+      "name": "Servitor Barrier",
+      "slug": "1496-servitor-barrier",
+      "level": "Lv. 1",
+      "description": "Makes the servitor invincible.",
+      "url": "https://mw2.wiki/lu4/skill/1496-servitor-barrier/1"
+    },
+    {
+      "name": "Improved Combat",
+      "slug": "1499-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/1499-improved-combat/1"
+    },
+    {
+      "name": "Spirit Sharing",
+      "slug": "1547-spirit-sharing",
+      "level": "Lv. 1",
+      "description": "Increases the user's P. Atk. by 3%, M. Atk. by 3%, skill P. Atk. by 5%, Atk. Spd. by 2%, Cast. Spd. by 1%, and critical rate by 5%. The effect applies to both the master and their summon.",
+      "url": "https://mw2.wiki/lu4/skill/1547-spirit-sharing/1"
+    },
+    {
+      "name": "Servitor Share",
+      "slug": "1557-servitor-share",
+      "level": "Lv. 1",
+      "description": "Extends the summoner's abilities to the servitor:\n50% of P. Atk./P. Def.\n25% of M. Atk./M. Def.\n15% of Max HP/MP\n25% of P. Crit. Rate\n15% of Atk. Spd.\n5% of Cast. Spd.",
+      "url": "https://mw2.wiki/lu4/skill/1557-servitor-share/1"
+    },
+    {
+      "name": "Mass Improved Combat",
+      "slug": "27217-mass-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nFor party members:\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/27217-mass-improved-combat/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Wind Shackle",
+      "slug": "1206-wind-shackle",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Atk. Spd. by 17%.",
+      "url": "https://mw2.wiki/lu4/skill/1206-wind-shackle/1"
+    },
+    {
+      "name": "Betray",
+      "slug": "1380-betray",
+      "level": "Lv. 1",
+      "description": "Cause's enemy servitor to attack its master.",
+      "url": "https://mw2.wiki/lu4/skill/1380-betray/1"
+    },
+    {
+      "name": "Mass Surrender to Water",
+      "slug": "1384-mass-surrender-to-water",
+      "level": "Lv. 1",
+      "description": "Resistance to Water -19%.\nWhen applied, cancels 'Resist Aqua' and prevents it from being rebuffed.",
+      "url": "https://mw2.wiki/lu4/skill/1384-mass-surrender-to-water/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Arcane Agility",
+      "slug": "338-arcane-agility",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +20%\nM. Skills Reuse Time -10%\nM. Skills MP Consumption +10%.\nConsumes 35 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/338-arcane-agility/1"
+    },
+    {
+      "name": "Transfer Pain",
+      "slug": "1262-transfer-pain",
+      "level": "Lv. 1",
+      "description": "Transfers 10% of received damage to a servitor. MP is continuously consumed proportional to user's level.",
+      "url": "https://mw2.wiki/lu4/skill/1262-transfer-pain/1"
+    },
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Spell Mastery",
+      "slug": "331-spell-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's INT, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/331-spell-mastery/1"
+    },
+    {
+      "name": "Summon Lore",
+      "slug": "435-summon-lore",
+      "level": "Lv. 1",
+      "description": "M. Skills MP Consumption -2%.\nWith Light Armor:\nP. Def. +20\nCast. Spd. +2%.\nWith Robe Armor:\nP. Def. +15\nCast. Spd. +3%.",
+      "url": "https://mw2.wiki/lu4/skill/435-summon-lore/1"
+    },
+    {
+      "name": "Excessive Loyalty",
+      "slug": "1497-excessive-loyalty",
+      "level": "Lv. 1",
+      "description": "When the master takes damage, 30% chance for the servitor:\nP. Atk. +35%\nM. Atk. +75%\nP. Crit. Rate +30%\nP. Crit. Damage +35%.\nDuration: 20 sec.",
+      "url": "https://mw2.wiki/lu4/skill/1497-excessive-loyalty/1"
+    },
+    {
+      "name": "Mutual Response",
+      "slug": "1498-mutual-response",
+      "level": "Lv. 1",
+      "description": "Ordinary attacks have a 5% chance for the servitor:\nRestores HP. Power: 420.\nRestores MP. Power: 70.",
+      "url": "https://mw2.wiki/lu4/skill/1498-mutual-response/1"
+    },
+    {
+      "name": "PvE Clarity",
+      "slug": "24326-pve-clarity",
+      "level": "Lv. 1",
+      "description": "Single target's M. Skills MP Consumption in PvE only: -30%.",
+      "url": "https://mw2.wiki/lu4/skill/24326-pve-clarity/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Magician's Movement",
+      "slug": "118-magicians-movement",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nAtk. Spd. -20%.",
+      "url": "https://mw2.wiki/lu4/skill/118-magicians-movement/1"
+    },
+    {
+      "name": "Spellcraft",
+      "slug": "163-spellcraft",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nCast. Spd. -50%.",
+      "url": "https://mw2.wiki/lu4/skill/163-spellcraft/1"
+    },
+    {
+      "name": "Mana Recovery",
+      "slug": "214-mana-recovery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/214-mana-recovery/1"
+    },
+    {
+      "name": "Robe Mastery",
+      "slug": "234-robe-mastery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nP. Def. +2\nM. Def. +1%.",
+      "url": "https://mw2.wiki/lu4/skill/234-robe-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "244-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +6.7.",
+      "url": "https://mw2.wiki/lu4/skill/244-armor-mastery/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "249-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 1.5 and M. Atk. by 1.9.",
+      "url": "https://mw2.wiki/lu4/skill/249-weapon-mastery/1"
+    },
+    {
+      "name": "Light Armor Mastery",
+      "slug": "258-light-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Light Armor:\nP. Def. +11\nCast. Spd. +100%\nAtk. Spd. +33%\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/258-light-armor-mastery/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Anti Magic",
+      "slug": "146-anti-magic",
+      "level": "Lv. 1",
+      "description": "M. Def. +10.",
+      "url": "https://mw2.wiki/lu4/skill/146-anti-magic/1"
+    },
+    {
+      "name": "Quick Recycle",
+      "slug": "164-quick-recycle",
+      "level": "Lv. 1",
+      "description": "Decreases Reuse Delay for magic by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/164-quick-recycle/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Fast HP Recovery",
+      "slug": "212-fast-hp-recovery",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/212-fast-hp-recovery/1"
+    },
+    {
+      "name": "Boost Mana",
+      "slug": "213-boost-mana",
+      "level": "Lv. 1",
+      "description": "Increases Max MP by 30.",
+      "url": "https://mw2.wiki/lu4/skill/213-boost-mana/1"
+    },
+    {
+      "name": "Fast Spell Casting",
+      "slug": "228-fast-spell-casting",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/228-fast-spell-casting/1"
+    },
+    {
+      "name": "Fast Mana Recovery",
+      "slug": "229-fast-mana-recovery",
+      "level": "Lv. 1",
+      "description": "Increases MP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/229-fast-mana-recovery/1"
+    },
+    {
+      "name": "Higher Mana Gain",
+      "slug": "285-higher-mana-gain",
+      "level": "Lv. 1",
+      "description": "Additionally increases recovery +22 MP when used Recharge skill.",
+      "url": "https://mw2.wiki/lu4/skill/285-higher-mana-gain/1"
+    },
+    {
+      "name": "Wisdom",
+      "slug": "328-wisdom",
+      "level": "Lv. 1",
+      "description": "Resistance to Hold +10%\nResistance to Sleep +10%\nResistance to Mental attacks +10%.",
+      "url": "https://mw2.wiki/lu4/skill/328-wisdom/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Cubic Mastery",
+      "slug": "143-cubic-mastery",
+      "level": "Lv. 1",
+      "description": "Ability to summon 2 Cubics at once.",
+      "url": "https://mw2.wiki/lu4/skill/143-cubic-mastery/1"
+    },
+    {
+      "name": "Fighter's Will",
+      "slug": "758-fighters-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nP. Skills Power +5%\nP. Crit. Rate +5%.\nWith short-range weapon:\nP. Atk. +5%\nAtk. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/758-fighters-will/1"
+    },
+    {
+      "name": "Archer's Will",
+      "slug": "759-archers-will",
+      "level": "Lv. 1",
+      "description": "With any weapon:\nSpeed +2\nAccuracy +3.\nOnly with Bow:\nP. Atk. +5%\nSkills Range +5%\nAttack Range +50.",
+      "url": "https://mw2.wiki/lu4/skill/759-archers-will/1"
+    },
+    {
+      "name": "Magician's Will",
+      "slug": "945-magicians-will",
+      "level": "Lv. 1",
+      "description": "M. Atk. +5%\nCast. Spd. +5%\nM. Crit. Rate +5%\nAll skills MP Consumption -5%.",
+      "url": "https://mw2.wiki/lu4/skill/945-magicians-will/1"
+    },
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ]
+}

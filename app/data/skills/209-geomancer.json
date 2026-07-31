@@ -1,0 +1,342 @@
+{
+  "Magical": [
+    {
+      "name": "Heal",
+      "slug": "1011-heal",
+      "level": "Lv. 1",
+      "description": "Restores the target's HP with 50 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1011-heal/1"
+    },
+    {
+      "name": "Cure Poison",
+      "slug": "1012-cure-poison",
+      "level": "Lv. 1",
+      "description": "Cures the target of minor poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/1012-cure-poison/1"
+    },
+    {
+      "name": "Battle Heal",
+      "slug": "1015-battle-heal",
+      "level": "Lv. 1",
+      "description": "Immediately restores the target's HP with 83 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1015-battle-heal/1"
+    },
+    {
+      "name": "Group Heal",
+      "slug": "1027-group-heal",
+      "level": "Lv. 1",
+      "description": "Restores all party members' HP with 66 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1027-group-heal/1"
+    },
+    {
+      "name": "Body To Mind",
+      "slug": "1157-body-to-mind",
+      "level": "Lv. 1",
+      "description": "Sacrifices HP to regenerate 22 MP.",
+      "url": "https://mw2.wiki/lu4/skill/1157-body-to-mind/1"
+    },
+    {
+      "name": "Aura Burn",
+      "slug": "1172-aura-burn",
+      "level": "Lv. 1",
+      "description": "Inflicts non-Attribute damage on an enemy with 19 Power added to M. Atk.",
+      "url": "https://mw2.wiki/lu4/skill/1172-aura-burn/1"
+    },
+    {
+      "name": "Wind Strike",
+      "slug": "1177-wind-strike",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 12 Power to create a powerful hurricane that inflicts Wind damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1177-wind-strike/1"
+    },
+    {
+      "name": "Sand Strike",
+      "slug": "32611-sand-strike",
+      "level": "Lv. 1",
+      "description": "Inflicts earth damage on an enemy with 39 Power added to M. Atk.\nOver-hit is possible.",
+      "url": "https://mw2.wiki/lu4/skill/32611-sand-strike/1"
+    },
+    {
+      "name": "Nature Absorb",
+      "slug": "32612-nature-absorb",
+      "level": "Lv. 1",
+      "description": "Inflicts earth damage with 18 Power added to M. Atk. Activates Natural Replenishment.",
+      "url": "https://mw2.wiki/lu4/skill/32612-nature-absorb/1"
+    },
+    {
+      "name": "Rune of Rebirth",
+      "slug": "32614-rune-of-rebirth",
+      "level": "Lv. 1",
+      "description": "Gathers energy from fallen enemies to restore their own health. Recovers 63 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/32614-rune-of-rebirth/1"
+    },
+    {
+      "name": "Sand Gust",
+      "slug": "32616-sand-gust",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 13 Power to conjure a whirling sandstorm that inflicts Earth damage on an enemies.",
+      "url": "https://mw2.wiki/lu4/skill/32616-sand-gust/1"
+    },
+    {
+      "name": "Rock Throw",
+      "slug": "32617-rock-throw",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 23 Power to create a powerful Rock Hunk that inflicts Earth damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/32617-rock-throw/1"
+    },
+    {
+      "name": "Rune Bolt",
+      "slug": "32618-rune-bolt",
+      "level": "Lv. 1",
+      "description": "Inflicts non-Attribute runic damage on an enemy using 13 Power added to M. Atk.",
+      "url": "https://mw2.wiki/lu4/skill/32618-rune-bolt/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Concentration",
+      "slug": "1078-concentration",
+      "level": "Lv. 1",
+      "description": "Chance to interrupt magic casting -18%.",
+      "url": "https://mw2.wiki/lu4/skill/1078-concentration/1"
+    },
+    {
+      "name": "Improved Combat",
+      "slug": "1499-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/1499-improved-combat/1"
+    },
+    {
+      "name": "Mass Improved Combat",
+      "slug": "27217-mass-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nFor party members:\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/27217-mass-improved-combat/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Sleep",
+      "slug": "1069-sleep",
+      "level": "Lv. 1",
+      "description": "Causes an enemy to sleep.",
+      "url": "https://mw2.wiki/lu4/skill/1069-sleep/1"
+    },
+    {
+      "name": "Curse Weakness",
+      "slug": "1164-curse-weakness",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's P. Atk. by 17%.",
+      "url": "https://mw2.wiki/lu4/skill/1164-curse-weakness/1"
+    },
+    {
+      "name": "Poisonous Cloud",
+      "slug": "1167-poisonous-cloud",
+      "level": "Lv. 1",
+      "description": "Creates a poison cloud around an enemy, causing loss of 24 HP per second.",
+      "url": "https://mw2.wiki/lu4/skill/1167-poisonous-cloud/1"
+    },
+    {
+      "name": "Curse Poison",
+      "slug": "1168-curse-poison",
+      "level": "Lv. 1",
+      "description": "Poisons an enemy, causing loss of 11 HP every second.",
+      "url": "https://mw2.wiki/lu4/skill/1168-curse-poison/1"
+    },
+    {
+      "name": "Curse Chaos",
+      "slug": "1222-curse-chaos",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Accuracy by 9.",
+      "url": "https://mw2.wiki/lu4/skill/1222-curse-chaos/1"
+    },
+    {
+      "name": "Surrender to Earth",
+      "slug": "1223-surrender-to-earth",
+      "level": "Lv. 1",
+      "description": "Resistance to Earth -15%.\nWhen applied, cancels 'Resist Earth' from the target.",
+      "url": "https://mw2.wiki/lu4/skill/1223-surrender-to-earth/1"
+    },
+    {
+      "name": "Earth Grasp",
+      "slug": "32619-earth-grasp",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Speed by 20% and HP Regeneration by 15%.",
+      "url": "https://mw2.wiki/lu4/skill/32619-earth-grasp/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Dwarven Craft",
+      "slug": "1321-dwarven-craft",
+      "level": "Lv. 1",
+      "description": "Can read Dwarven recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1321-dwarven-craft/1"
+    },
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Spell Mastery",
+      "slug": "331-spell-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's INT, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/331-spell-mastery/1"
+    },
+    {
+      "name": "PvE Clarity",
+      "slug": "24326-pve-clarity",
+      "level": "Lv. 1",
+      "description": "Single target's M. Skills MP Consumption in PvE only: -30%.",
+      "url": "https://mw2.wiki/lu4/skill/24326-pve-clarity/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Magician's Movement",
+      "slug": "118-magicians-movement",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nAtk. Spd. -20%.",
+      "url": "https://mw2.wiki/lu4/skill/118-magicians-movement/1"
+    },
+    {
+      "name": "Spellcraft",
+      "slug": "163-spellcraft",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nCast. Spd. -50%.",
+      "url": "https://mw2.wiki/lu4/skill/163-spellcraft/1"
+    },
+    {
+      "name": "Create Item",
+      "slug": "172-create-item",
+      "level": "Lv. 1",
+      "description": "Allows the user to manufacture level 1 items.\nDwarven Manufacture size: +1 slot.",
+      "url": "https://mw2.wiki/lu4/skill/172-create-item/1"
+    },
+    {
+      "name": "Mana Recovery",
+      "slug": "214-mana-recovery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/214-mana-recovery/1"
+    },
+    {
+      "name": "Robe Mastery",
+      "slug": "234-robe-mastery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nP. Def. +2\nM. Def. +1%.",
+      "url": "https://mw2.wiki/lu4/skill/234-robe-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "244-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +6.7.",
+      "url": "https://mw2.wiki/lu4/skill/244-armor-mastery/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "249-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 1.5 and M. Atk. by 1.9.",
+      "url": "https://mw2.wiki/lu4/skill/249-weapon-mastery/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Anti Magic",
+      "slug": "146-anti-magic",
+      "level": "Lv. 1",
+      "description": "M. Def. +10.",
+      "url": "https://mw2.wiki/lu4/skill/146-anti-magic/1"
+    },
+    {
+      "name": "Quick Recycle",
+      "slug": "164-quick-recycle",
+      "level": "Lv. 1",
+      "description": "Decreases Reuse Delay for magic by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/164-quick-recycle/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Fast HP Recovery",
+      "slug": "212-fast-hp-recovery",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/212-fast-hp-recovery/1"
+    },
+    {
+      "name": "Boost Mana",
+      "slug": "213-boost-mana",
+      "level": "Lv. 1",
+      "description": "Increases Max MP by 30.",
+      "url": "https://mw2.wiki/lu4/skill/213-boost-mana/1"
+    },
+    {
+      "name": "Fast Spell Casting",
+      "slug": "228-fast-spell-casting",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/228-fast-spell-casting/1"
+    },
+    {
+      "name": "Fast Mana Recovery",
+      "slug": "229-fast-mana-recovery",
+      "level": "Lv. 1",
+      "description": "Increases MP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/229-fast-mana-recovery/1"
+    },
+    {
+      "name": "Higher Mana Gain",
+      "slug": "285-higher-mana-gain",
+      "level": "Lv. 1",
+      "description": "Additionally increases recovery +22 MP when used Recharge skill.",
+      "url": "https://mw2.wiki/lu4/skill/285-higher-mana-gain/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ]
+}
