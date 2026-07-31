@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from app.bot import bot
@@ -35,25 +35,38 @@ async def check_prime():
     # Monday = 0 ... Sunday = 6
     day = now.weekday() + 1
 
-    current_time = now.strftime("%H:%M")
-
     prime = SettingsRepository.get_today_prime(day)
 
     print("=" * 50)
     print(f"NOW: {now}")
     print(f"DAY: {day}")
-    print(f"CURRENT TIME: {current_time}")
     print(f"PRIME: {prime}")
 
     if not prime:
         print("No prime for today")
         return
 
-    print(f"START: {prime['start_time']}")
+    start_time = datetime.strptime(
+        prime["start_time"],
+        "%H:%M"
+    ).time()
+
+    notification_time = (
+        datetime.combine(now.date(), start_time)
+        - timedelta(minutes=30)
+    ).time()
+
+    current_time = now.time().replace(
+        second=0,
+        microsecond=0
+    )
+
+    print(f"START: {start_time}")
+    print(f"NOTIFICATION: {notification_time}")
+    print(f"CURRENT: {current_time}")
     print(f"END: {prime['end_time']}")
 
-    # Проверяем время начала прайма
-    if current_time != prime["start_time"]:
+    if current_time != notification_time:
         print("Not time yet")
         return
 
@@ -71,6 +84,8 @@ async def check_prime():
 
 🕗 Час:
 {prime["start_time"]} - {prime["end_time"]}
+
+⏰ До початку прайму залишилося 30 хвилин!
 
 Час заходити в гру!
 Всім бути онлайн! 🔥

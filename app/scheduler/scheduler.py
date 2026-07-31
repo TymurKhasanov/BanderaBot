@@ -8,7 +8,6 @@ from app.database.repository import SettingsRepository
 
 scheduler = AsyncIOScheduler()
 
-
 KYIV_TZ = ZoneInfo("Europe/Kyiv")
 
 
@@ -16,7 +15,7 @@ def get_next_prime():
 
     now = datetime.now(KYIV_TZ)
 
-    # ищем ближайший прайм на следующие 7 дней
+    # Ищем ближайшее уведомление на следующие 7 дней
     for i in range(8):
 
         check_date = now + timedelta(days=i)
@@ -28,18 +27,25 @@ def get_next_prime():
         if not prime:
             continue
 
-        prime_datetime = check_date.replace(
-            hour=int(prime["start_time"].split(":")[0]),
-            minute=int(prime["start_time"].split(":")[1]),
-            second=0,
-            microsecond=0,
+        start_time = datetime.strptime(
+            prime["start_time"],
+            "%H:%M"
+        ).time()
+
+        notification_datetime = (
+            datetime.combine(
+                check_date.date(),
+                start_time,
+                tzinfo=KYIV_TZ,
+            )
+            - timedelta(minutes=30)
         )
 
-        # если сегодня время уже прошло
-        if prime_datetime <= now:
+        # Если время уведомления уже прошло — ищем следующий прайм
+        if notification_datetime <= now:
             continue
 
-        return prime_datetime, prime
+        return notification_datetime, prime
 
     return None, None
 
@@ -67,9 +73,11 @@ def start_scheduler():
         )
 
         print(
-            f"TIME: "
+            f"PRIME TIME: "
             f"{prime['start_time']} - {prime['end_time']}"
         )
+
+        print("NOTIFICATION: 30 minutes before prime")
 
     else:
 
