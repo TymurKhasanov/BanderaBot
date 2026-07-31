@@ -1,0 +1,372 @@
+{
+  "Magical": [
+    {
+      "name": "Heal",
+      "slug": "1011-heal",
+      "level": "Lv. 1",
+      "description": "Restores the target's HP with 50 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1011-heal/1"
+    },
+    {
+      "name": "Cure Poison",
+      "slug": "1012-cure-poison",
+      "level": "Lv. 1",
+      "description": "Cures the target of minor poisoning.",
+      "url": "https://mw2.wiki/lu4/skill/1012-cure-poison/1"
+    },
+    {
+      "name": "Recharge",
+      "slug": "1013-recharge",
+      "level": "Lv. 1",
+      "description": "Recovers MP with up to 48 Power, depending on the target's level. Cannot be used by classes that have Recharge skill.",
+      "url": "https://mw2.wiki/lu4/skill/1013-recharge/1"
+    },
+    {
+      "name": "Battle Heal",
+      "slug": "1015-battle-heal",
+      "level": "Lv. 1",
+      "description": "Immediately restores the target's HP with 83 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1015-battle-heal/1"
+    },
+    {
+      "name": "Resurrection",
+      "slug": "1016-resurrection",
+      "level": "Lv. 1",
+      "description": "Resurrects a corpse, restores about 0% of Exp.",
+      "url": "https://mw2.wiki/lu4/skill/1016-resurrection/1"
+    },
+    {
+      "name": "Group Heal",
+      "slug": "1027-group-heal",
+      "level": "Lv. 1",
+      "description": "Restores all party members' HP with 66 Power.",
+      "url": "https://mw2.wiki/lu4/skill/1027-group-heal/1"
+    },
+    {
+      "name": "Disrupt Monster",
+      "slug": "1031-disrupt-monster",
+      "level": "Lv. 1",
+      "description": "Inflicts holy damage on the target with 19 Power added to M. Atk.",
+      "url": "https://mw2.wiki/lu4/skill/1031-disrupt-monster/1"
+    },
+    {
+      "name": "Vampiric Touch",
+      "slug": "1147-vampiric-touch",
+      "level": "Lv. 1",
+      "description": "Inflicts dark damage with 18 Power added to M. Atk. Absorbs 40% of the damage as HP.",
+      "url": "https://mw2.wiki/lu4/skill/1147-vampiric-touch/1"
+    },
+    {
+      "name": "Wind Strike",
+      "slug": "1177-wind-strike",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 12 Power to create a powerful hurricane that inflicts Wind damage on an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1177-wind-strike/1"
+    }
+  ],
+  "Buff": [
+    {
+      "name": "Mental Shield",
+      "slug": "1035-mental-shield",
+      "level": "Lv. 1",
+      "description": "Resistance to Hold +20% Resistance to Sleep +25% Resistance to Mental attaks +25%.",
+      "url": "https://mw2.wiki/lu4/skill/1035-mental-shield/1"
+    },
+    {
+      "name": "Holy Weapon",
+      "slug": "1043-holy-weapon",
+      "level": "Lv. 1",
+      "description": "A temporary holy enhancement of a physical attack. Can be used on one's party members.",
+      "url": "https://mw2.wiki/lu4/skill/1043-holy-weapon/1"
+    },
+    {
+      "name": "Kiss of Eva",
+      "slug": "1073-kiss-of-eva",
+      "level": "Lv. 1",
+      "description": "Increases MP Regeneration by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/1073-kiss-of-eva/1"
+    },
+    {
+      "name": "Concentration",
+      "slug": "1078-concentration",
+      "level": "Lv. 1",
+      "description": "Chance to interrupt magic casting -18%.",
+      "url": "https://mw2.wiki/lu4/skill/1078-concentration/1"
+    },
+    {
+      "name": "Improved Combat",
+      "slug": "1499-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/1499-improved-combat/1"
+    },
+    {
+      "name": "Improved Magic",
+      "slug": "1500-improved-magic",
+      "level": "Lv. 1",
+      "description": "Combines 'Empower' and 'Magic Barrier' effects.\nM. Atk. +25%\nM. Def. +10%.",
+      "url": "https://mw2.wiki/lu4/skill/1500-improved-magic/1"
+    },
+    {
+      "name": "Improved Critical Attack",
+      "slug": "1502-improved-critical-attack",
+      "level": "Lv. 1",
+      "description": "Combines 'Focus' and 'Death Whisper' effects.\nP. Crit. Rate +10%\nP. Crit. Damage +15%.",
+      "url": "https://mw2.wiki/lu4/skill/1502-improved-critical-attack/1"
+    },
+    {
+      "name": "Improved Movement",
+      "slug": "1504-improved-movement",
+      "level": "Lv. 1",
+      "description": "Combines 'Wind Walk' and 'Agility' effects.\nSpeed +20\nEvasion +1.",
+      "url": "https://mw2.wiki/lu4/skill/1504-improved-movement/1"
+    },
+    {
+      "name": "Mass Improved Magic",
+      "slug": "24537-mass-improved-magic",
+      "level": "Lv. 1",
+      "description": "Combines 'Empower' and 'Magic Barrier' effects.\nFor party members:\nM. Atk. +25%\nM. Def. +10%.",
+      "url": "https://mw2.wiki/lu4/skill/24537-mass-improved-magic/1"
+    },
+    {
+      "name": "Mass Improved Movement",
+      "slug": "24539-mass-improved-movement",
+      "level": "Lv. 1",
+      "description": "Combines 'Wind Walk' and 'Agility' effects.\nFor party members:\nSpeed +20\nEvasion +1.",
+      "url": "https://mw2.wiki/lu4/skill/24539-mass-improved-movement/1"
+    },
+    {
+      "name": "Improved Rampage",
+      "slug": "25239-improved-rampage",
+      "level": "Lv. 1",
+      "description": "Combines 'Haste' and 'Vampiric Rage' effects.\nAtk. Spd. +12%\nRecovers as HP 5% of melee damage dealt.",
+      "url": "https://mw2.wiki/lu4/skill/25239-improved-rampage/1"
+    },
+    {
+      "name": "Mass Mental Shield",
+      "slug": "27035-mass-mental-shield",
+      "level": "Lv. 1",
+      "description": "All party members: Resistance to Hold +20%, Sleep +25%, Mental +25%.",
+      "url": "https://mw2.wiki/lu4/skill/27035-mass-mental-shield/1"
+    },
+    {
+      "name": "Mass Improved Combat",
+      "slug": "27217-mass-improved-combat",
+      "level": "Lv. 1",
+      "description": "Combines 'Might' and 'Shield' effects.\nFor party members:\nP. Atk. +6%\nP. Def. +6%.",
+      "url": "https://mw2.wiki/lu4/skill/27217-mass-improved-combat/1"
+    },
+    {
+      "name": "Mass Improved Critical Attack",
+      "slug": "27219-mass-improved-critical-attack",
+      "level": "Lv. 1",
+      "description": "Combines 'Focus' and 'Death Whisper' effects.\nFor party members:\nP. Crit. Rate +10%\nP. Crit. Damage +15%.",
+      "url": "https://mw2.wiki/lu4/skill/27219-mass-improved-critical-attack/1"
+    },
+    {
+      "name": "Mass Improved Rampage",
+      "slug": "27220-mass-improved-rampage",
+      "level": "Lv. 1",
+      "description": "Combines 'Haste' and 'Vampiric Rage' effects.\nFor party members:\nAtk. Spd. +12%\nRecovers as HP 5% of melee damage dealt.",
+      "url": "https://mw2.wiki/lu4/skill/27220-mass-improved-rampage/1"
+    }
+  ],
+  "Debuff": [
+    {
+      "name": "Sleep",
+      "slug": "1069-sleep",
+      "level": "Lv. 1",
+      "description": "Causes an enemy to sleep.",
+      "url": "https://mw2.wiki/lu4/skill/1069-sleep/1"
+    },
+    {
+      "name": "Ice Bolt",
+      "slug": "1184-ice-bolt",
+      "level": "Lv. 1",
+      "description": "Supplements the user's M. Atk. with 8 Power to temporarily freeze the surrounding air, inflicting Water damage on an enemy and decreasing their Speed by 20%.",
+      "url": "https://mw2.wiki/lu4/skill/1184-ice-bolt/1"
+    },
+    {
+      "name": "Dryad Root",
+      "slug": "1201-dryad-root",
+      "level": "Lv. 1",
+      "description": "Immobilizes an enemy.",
+      "url": "https://mw2.wiki/lu4/skill/1201-dryad-root/1"
+    },
+    {
+      "name": "Wind Shackle",
+      "slug": "1206-wind-shackle",
+      "level": "Lv. 1",
+      "description": "Decreases an enemy's Atk. Spd. by 17%.",
+      "url": "https://mw2.wiki/lu4/skill/1206-wind-shackle/1"
+    }
+  ],
+  "Item": [
+    {
+      "name": "Common Craft",
+      "slug": "1322-common-craft",
+      "level": "Lv. 1",
+      "description": "Can read common recipe books.",
+      "url": "https://mw2.wiki/lu4/skill/1322-common-craft/1"
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "Block Buff",
+      "slug": "24314-block-buff",
+      "level": "Lv. 1",
+      "description": "Switchable skill.\nYour character cannot receive external buff effects.",
+      "url": "https://mw2.wiki/lu4/skill/24314-block-buff/1"
+    }
+  ],
+  "Special": [
+    {
+      "name": "Spell Mastery",
+      "slug": "331-spell-mastery",
+      "level": "Lv. 1",
+      "description": "Depending on user's INT, the re-use time resets or the duration doubles.",
+      "url": "https://mw2.wiki/lu4/skill/331-spell-mastery/1"
+    },
+    {
+      "name": "PvE Clarity",
+      "slug": "24326-pve-clarity",
+      "level": "Lv. 1",
+      "description": "Single target's M. Skills MP Consumption in PvE only: -30%.",
+      "url": "https://mw2.wiki/lu4/skill/24326-pve-clarity/1"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Magician's Movement",
+      "slug": "118-magicians-movement",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nAtk. Spd. -20%.",
+      "url": "https://mw2.wiki/lu4/skill/118-magicians-movement/1"
+    },
+    {
+      "name": "Spellcraft",
+      "slug": "163-spellcraft",
+      "level": "Lv. 1",
+      "description": "Without Robe Armor:\nCast. Spd. -50%.",
+      "url": "https://mw2.wiki/lu4/skill/163-spellcraft/1"
+    },
+    {
+      "name": "Mana Recovery",
+      "slug": "214-mana-recovery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/214-mana-recovery/1"
+    },
+    {
+      "name": "Robe Mastery",
+      "slug": "235-robe-mastery",
+      "level": "Lv. 1",
+      "description": "With Robe Armor:\nP. Def. +7\nM. Def. +1%.",
+      "url": "https://mw2.wiki/lu4/skill/235-robe-mastery/1"
+    },
+    {
+      "name": "Light Armor Mastery",
+      "slug": "236-light-armor-mastery",
+      "level": "Lv. 1",
+      "description": "With Light Armor:\nP. Def. +5\nCast. Spd. +91%\nAtk. Spd. +25%\nMP Regeneration +20%.",
+      "url": "https://mw2.wiki/lu4/skill/236-light-armor-mastery/1"
+    },
+    {
+      "name": "Expertise D",
+      "slug": "239-expertise-d",
+      "level": "Lv. 1",
+      "description": "Increases expertise in using D-grade equipment.",
+      "url": "https://mw2.wiki/lu4/skill/239-expertise-d/1"
+    },
+    {
+      "name": "Armor Mastery",
+      "slug": "244-armor-mastery",
+      "level": "Lv. 1",
+      "description": "P. Def. +6.7.",
+      "url": "https://mw2.wiki/lu4/skill/244-armor-mastery/1"
+    },
+    {
+      "name": "Weapon Mastery",
+      "slug": "249-weapon-mastery",
+      "level": "Lv. 1",
+      "description": "Increases P. Atk. by 1.5 and M. Atk. by 1.9.",
+      "url": "https://mw2.wiki/lu4/skill/249-weapon-mastery/1"
+    },
+    {
+      "name": "Create Common Item",
+      "slug": "1320-create-common-item",
+      "level": "Lv. 1",
+      "description": "Creates level 1 common items.",
+      "url": "https://mw2.wiki/lu4/skill/1320-create-common-item/1"
+    }
+  ],
+  "Ability": [
+    {
+      "name": "Anti Magic",
+      "slug": "146-anti-magic",
+      "level": "Lv. 1",
+      "description": "M. Def. +10.",
+      "url": "https://mw2.wiki/lu4/skill/146-anti-magic/1"
+    },
+    {
+      "name": "Quick Recycle",
+      "slug": "164-quick-recycle",
+      "level": "Lv. 1",
+      "description": "Decreases Reuse Delay for magic by 10%.",
+      "url": "https://mw2.wiki/lu4/skill/164-quick-recycle/1"
+    },
+    {
+      "name": "Lucky",
+      "slug": "194-lucky",
+      "level": "Lv. 1",
+      "description": "At lv 10 or lower, the user will not experience loss of Exp, and after-death effect upon death.",
+      "url": "https://mw2.wiki/lu4/skill/194-lucky/1"
+    },
+    {
+      "name": "Fast HP Recovery",
+      "slug": "212-fast-hp-recovery",
+      "level": "Lv. 1",
+      "description": "Increases HP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/212-fast-hp-recovery/1"
+    },
+    {
+      "name": "Boost Mana",
+      "slug": "213-boost-mana",
+      "level": "Lv. 1",
+      "description": "Increases Max MP by 30.",
+      "url": "https://mw2.wiki/lu4/skill/213-boost-mana/1"
+    },
+    {
+      "name": "Fast Spell Casting",
+      "slug": "228-fast-spell-casting",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +5%.",
+      "url": "https://mw2.wiki/lu4/skill/228-fast-spell-casting/1"
+    },
+    {
+      "name": "Fast Mana Recovery",
+      "slug": "229-fast-mana-recovery",
+      "level": "Lv. 1",
+      "description": "Increases MP Recovery Bonus by 1.1.",
+      "url": "https://mw2.wiki/lu4/skill/229-fast-mana-recovery/1"
+    }
+  ],
+  "Occupation": [
+    {
+      "name": "Children of Shilen",
+      "slug": "964-children-of-shilen",
+      "level": "Lv. 1",
+      "description": "Cast. Spd. +13 and MP Recovery Bonus by 2%.",
+      "url": "https://mw2.wiki/lu4/skill/964-children-of-shilen/1"
+    }
+  ],
+  "Additional": [
+    {
+      "name": "Divine Inspiration",
+      "slug": "1405-divine-inspiration",
+      "level": "Lv. 1",
+      "description": "Increases the number of buffs an individual can receive by 1 (+1: 20 => 21).",
+      "url": "https://mw2.wiki/lu4/skill/1405-divine-inspiration/1"
+    }
+  ]
+}
