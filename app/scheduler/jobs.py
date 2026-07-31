@@ -1,8 +1,11 @@
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from app.bot import bot
 from app.database.repository import SettingsRepository
 
+
+KYIV_TZ = ZoneInfo("Europe/Kyiv")
 
 last_sent = None
 
@@ -27,7 +30,7 @@ async def check_prime():
         print("Group chat ID not configured")
         return
 
-    now = datetime.now()
+    now = datetime.now(KYIV_TZ)
 
     # Monday = 0 ... Sunday = 6
     day = now.weekday() + 1
