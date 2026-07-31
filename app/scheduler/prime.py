@@ -3,56 +3,90 @@ from datetime import datetime
 from app.bot import bot
 from app.database.repository import SettingsRepository
 
-
-last_sent_date = None
+last_sent = None
 
 
 async def check_prime():
-    global last_sent_date
+
+    global last_sent
 
     settings = SettingsRepository.get_settings()
 
     if not settings:
+        print("[PRIME] Settings not found")
         return
 
     # Напоминания выключены
     if not settings["reminders_enabled"]:
+        print("[PRIME] Reminders disabled")
         return
 
-    # Группа не привязана
+    # Нет группы
     if not settings["group_chat_id"]:
-        return
-
-    # Время прайма не задано
-    if not settings["prime_time"]:
+        print("[PRIME] Group chat ID not configured")
         return
 
     now = datetime.now()
 
+    # Monday = 0 ... Sunday = 6
+    day = now.weekday() + 1
+
     current_time = now.strftime("%H:%M")
 
-    # Еще не время прайма
-    if current_time != settings["prime_time"]:
+    prime = SettingsRepository.get_today_prime(day)
+
+    print("=" * 60)
+    print(f"NOW        : {now}")
+    print(f"DAY        : {day}")
+    print(f"TIME       : {current_time}")
+    print(f"PRIME DATA : {prime}")
+
+    if not prime:
+        print("[PRIME] No prime configured for today")
         return
 
-    today = now.strftime("%Y-%m-%d")
+    start_time = prime["start_time"]
+    end_time = prime["end_time"]
 
-    # Уже отправляли сегодня
-    if last_sent_date == today:
+    print(f"START TIME : {start_time}")
+    print(f"END TIME   : {end_time}")
+    print(f"EQUAL      : {current_time == start_time}")
+
+    # Проверяем время начала прайма
+    if current_time != start_time:
+        print("[PRIME] Not time yet")
+        return
+
+    unique_key = (
+        now.date(),
+        start_time
+    )
+
+    print(f"UNIQUE KEY : {unique_key}")
+    print(f"LAST SENT  : {last_sent}")
+
+    if last_sent == unique_key:
+        print("[PRIME] Already sent today")
         return
 
     message = f"""
-🇺🇦 ПРАЙМ 🇺🇦
+🇺🇦 <b>ПРАЙМ 🇺🇦</b>
 
-🕗 {settings["prime_time"]}
+🕗 Час:
+{start_time} - {end_time}
 
 Час заходити в гру!
 Всім бути онлайн! 🔥
 """
 
+    print("[PRIME] >>> SENDING MESSAGE <<<")
+
     await bot.send_message(
-        settings["group_chat_id"],
-        message
+        chat_id=settings["group_chat_id"],
+        text=message,
+        parse_mode="HTML"
     )
 
-    last_sent_date = today
+    last_sent = unique_key
+
+    print("[PRIME] Message sent successfully")
