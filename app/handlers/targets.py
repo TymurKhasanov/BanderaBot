@@ -139,37 +139,21 @@ async def roster_selected(callback: CallbackQuery):
         await callback.answer()
         return
 
-    targets.sort(
-        key=lambda target: (
-            target["enemy_clan"].lower(),
-            target["pack_kind"].lower(),
-            target["nickname"].lower(),
-        )
-    )
-
     text = f"🎯 <b>{roster['name']}</b>\n\n"
 
     current_clan = None
-    current_pack_kind = None
 
+    # Цілі виводяться в тому самому порядку,
+    # у якому вони прийшли з API.
     for target in targets:
 
         enemy_clan = target["enemy_clan"]
-        pack_kind = target["pack_kind"]
 
         if enemy_clan != current_clan:
             current_clan = enemy_clan
-            current_pack_kind = None
 
             text += (
                 f"\n⚔️ <b>{enemy_clan}</b>\n"
-            )
-
-        if pack_kind != current_pack_kind:
-            current_pack_kind = pack_kind
-
-            text += (
-                f"\n<b>{pack_kind}</b>\n"
             )
 
         character_class = CLASS_NAMES.get(
