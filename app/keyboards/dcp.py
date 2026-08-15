@@ -1,10 +1,14 @@
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
+
 dcp_keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="👥 Ростери"),
             KeyboardButton(text="💰 Баланс"),
+        ],
+        [
+            KeyboardButton(text="🎯 Цілі"),
         ],
         [
             KeyboardButton(text="⬅️ Назад"),
