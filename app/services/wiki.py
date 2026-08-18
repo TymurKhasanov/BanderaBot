@@ -3,7 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-WIKI_URL = "https://masterwork.wiki/lu4/main"
+WIKI_URL = "https://masterwork.wiki/lu4-b-w-c/main"
 
 EPICS = {
     "Core",
