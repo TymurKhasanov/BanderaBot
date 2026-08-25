@@ -9,6 +9,7 @@ dcp_keyboard = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="🎯 Цілі"),
+            KeyboardButton(text="🏷️ Лоти"),
         ],
         [
             KeyboardButton(text="⬅️ Назад"),

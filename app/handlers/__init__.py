@@ -10,7 +10,7 @@ from .admin_buttons import router as admin_buttons_router
 from .admin_input import router as admin_input_router
 from .dcp import router as dcp_router
 from .skills import router as skills_router
-from .targets import router as targets_router
+from .auctions import router as auctions_router
 
 
 routers = [
@@ -23,8 +23,8 @@ routers = [
     prime_router,
     announcement_router,
     dcp_router,
-    targets_router,
     skills_router,
+    auctions_router,
 
     admin_menu_router,
     admin_buttons_router,

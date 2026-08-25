@@ -32,36 +32,24 @@ class DcpApi:
         data = response.json()
 
         self.token = data["accessToken"]
-        self.expires_at = (
-            time.time()
-            + data["expiresIn"]
-            - 30
-        )
+        self.expires_at = time.time() + data["expiresIn"] - 30
 
     def _get_token(self):
-        if (
-            not self.token
-            or time.time() >= self.expires_at
-        ):
+        if not self.token or time.time() >= self.expires_at:
             self._login()
 
         return self.token
 
-    def _get_headers(self):
+    def get_rosters(self):
         token = self._get_token()
 
-        return {
-            "Authorization": f"Bearer {token}",
-            "Accept": "application/json",
-        }
-
-    def get_rosters(self):
         response = requests.get(
             f"{self.base_url}/rosters",
-            params={
-                "type": "PARTY",
+            params={"type": "PARTY"},
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/json",
             },
-            headers=self._get_headers(),
             timeout=20,
         )
 
@@ -69,10 +57,15 @@ class DcpApi:
 
         return response.json()
 
-    def get_targets(self):
+    def get_auctions(self):
+        token = self._get_token()
+
         response = requests.get(
-            f"{self.base_url}/targets",
-            headers=self._get_headers(),
+            f"{self.base_url}/auctions",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/json",
+            },
             timeout=20,
         )
 
