@@ -88,6 +88,36 @@ class SettingsRepository:
             connection.commit()
 
 
+    @staticmethod
+    def replace_prime_schedule(
+        prime_time: str,
+        schedule: list[tuple[int, str, str]],
+    ):
+        with get_connection() as connection:
+            cursor = connection.cursor()
+            cursor.execute(
+                """
+                UPDATE settings
+                SET prime_time = ?,
+                    updated_at = CURRENT_TIMESTAMP
+                WHERE id = 1
+                """,
+                (prime_time,),
+            )
+            cursor.execute("DELETE FROM prime_schedule")
+            cursor.executemany(
+                """
+                INSERT INTO prime_schedule (
+                    day_of_week,
+                    start_time,
+                    end_time
+                )
+                VALUES (?, ?, ?)
+                """,
+                schedule,
+            )
+            connection.commit()
+
 
     @staticmethod
     def get_prime_schedule():
@@ -166,6 +196,46 @@ class SettingsRepository:
             ))
 
             return cursor.fetchone()
+
+
+    @staticmethod
+    def mark_prime_notification_sent(
+        notification_date: str,
+        start_time: str,
+    ) -> bool:
+        with get_connection() as connection:
+            cursor = connection.cursor()
+            cursor.execute(
+                """
+                INSERT OR IGNORE INTO prime_notifications (
+                    notification_date,
+                    start_time
+                )
+                VALUES (?, ?)
+                """,
+                (notification_date, start_time),
+            )
+            inserted = cursor.rowcount == 1
+            connection.commit()
+            return inserted
+
+
+    @staticmethod
+    def remove_prime_notification(
+        notification_date: str,
+        start_time: str,
+    ) -> None:
+        with get_connection() as connection:
+            cursor = connection.cursor()
+            cursor.execute(
+                """
+                DELETE FROM prime_notifications
+                WHERE notification_date = ?
+                  AND start_time = ?
+                """,
+                (notification_date, start_time),
+            )
+            connection.commit()
 
 
 

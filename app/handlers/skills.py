@@ -1,3 +1,6 @@
+import logging
+from html import escape
+
 from aiogram import F, Router
 from aiogram.types import CallbackQuery, Message
 
@@ -13,6 +16,7 @@ from app.services.wiki_classes import get_classes
 from app.services.wiki_skills import get_skills
 
 router = Router()
+logger = logging.getLogger("banderabot")
 
 ACTIVE_CATEGORIES = [
     "Physical",
@@ -51,9 +55,20 @@ async def skills_back(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("race:"))
 async def race_selected(callback: CallbackQuery):
+    if callback.message is None or not callback.data:
+        await callback.answer("Повідомлення недоступне.", show_alert=True)
+        return
     _, race = callback.data.split(":", 1)
 
-    classes = get_classes()
+    if race not in RACE_TITLES:
+        await callback.answer("Невідома раса.", show_alert=True)
+        return
+    try:
+        classes = await get_classes()
+    except Exception:
+        logger.exception("Failed to retrieve wiki classes")
+        await callback.answer("❌ Wiki тимчасово недоступна.", show_alert=True)
+        return
 
     await callback.message.edit_text(
         f"{RACE_TITLES[race]}\n\n<b>Оберіть професію</b>",
@@ -68,9 +83,17 @@ async def race_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("class:"))
 async def class_selected(callback: CallbackQuery):
+    if callback.message is None or not callback.data:
+        await callback.answer("Повідомлення недоступне.", show_alert=True)
+        return
     _, race, class_slug = callback.data.split(":", 2)
 
-    get_skills(class_slug)
+    try:
+        await get_skills(class_slug)
+    except Exception:
+        logger.exception("Failed to retrieve skills for %s", class_slug)
+        await callback.answer("❌ Не вдалося завантажити навички.", show_alert=True)
+        return
 
     await callback.message.edit_text(
         "⚔️ <b>Оберіть тип навичок</b>",
@@ -85,9 +108,17 @@ async def class_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("type:"))
 async def type_selected(callback: CallbackQuery):
+    if callback.message is None or not callback.data:
+        await callback.answer("Повідомлення недоступне.", show_alert=True)
+        return
     _, race, class_slug, skill_type = callback.data.split(":", 3)
 
-    skills = get_skills(class_slug)
+    try:
+        skills = await get_skills(class_slug)
+    except Exception:
+        logger.exception("Failed to retrieve skills for %s", class_slug)
+        await callback.answer("❌ Не вдалося завантажити навички.", show_alert=True)
+        return
 
     if skill_type == "active":
         categories = [
@@ -122,18 +153,25 @@ async def type_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("cat:"))
 async def category_selected(callback: CallbackQuery):
+    if callback.message is None or not callback.data:
+        await callback.answer("Повідомлення недоступне.", show_alert=True)
+        return
     _, race, class_slug, skill_type, category = callback.data.split(":", 4)
 
-    skills = get_skills(class_slug)
+    try:
+        skills = await get_skills(class_slug)
+    except Exception:
+        logger.exception("Failed to retrieve skills for %s", class_slug)
+        await callback.answer("❌ Не вдалося завантажити навички.", show_alert=True)
+        return
 
     await callback.message.edit_text(
-        f"📚 <b>{category}</b>\n\nОберіть навичку:",
+        f"📚 <b>{escape(category)}</b>\n\nОберіть навичку:",
         reply_markup=skills_keyboard(
             skills.get(category, []),
             race,
             class_slug,
             skill_type,
-            category,
         ),
     )
 
@@ -142,9 +180,17 @@ async def category_selected(callback: CallbackQuery):
 
 @router.callback_query(F.data.startswith("skill:"))
 async def skill_selected(callback: CallbackQuery):
+    if callback.message is None or not callback.data:
+        await callback.answer("Повідомлення недоступне.", show_alert=True)
+        return
     _, race, class_slug, skill_slug = callback.data.split(":", 3)
 
-    skills = get_skills(class_slug)
+    try:
+        skills = await get_skills(class_slug)
+    except Exception:
+        logger.exception("Failed to retrieve skills for %s", class_slug)
+        await callback.answer("❌ Не вдалося завантажити навичку.", show_alert=True)
+        return
 
     skill = None
     category = None
@@ -172,9 +218,9 @@ async def skill_selected(callback: CallbackQuery):
     )
 
     text = (
-        f"⚔️ <b>{skill['name']}</b>\n"
-        f"📈 <b>{skill['level']}</b>\n\n"
-        f"{skill['description']}"
+        f"⚔️ <b>{escape(skill['name'])}</b>\n"
+        f"📈 <b>{escape(skill['level'])}</b>\n\n"
+        f"{escape(skill['description'])}"
     )
 
     await callback.message.edit_text(

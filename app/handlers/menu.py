@@ -1,70 +1,56 @@
+import logging
+from html import escape
+
 from aiogram import F, Router
 from aiogram.types import Message
 
 from app.database.repository import SettingsRepository
 from app.services.wiki import get_epics
 
+
 router = Router()
+logger = logging.getLogger("banderabot")
 
 
 @router.message(F.text == "📅 Прайм")
-async def prime(message: Message):
-
+async def prime(message: Message) -> None:
     schedule = SettingsRepository.get_prime_schedule()
-
-    if not schedule:
-        await message.answer(
-            "📅 Розклад прайму ще не встановлено."
-        )
-        return
-
     await message.answer(
-        schedule
+        escape(schedule) if schedule else "📅 Розклад прайму ще не встановлено."
     )
 
 
 @router.message(F.text == "👹 Епіки")
-async def epics(message: Message):
-
+async def epics(message: Message) -> None:
     try:
-        epics = get_epics()
+        items = await get_epics()
+    except Exception:
+        logger.exception("Failed to retrieve epics")
+        await message.answer("❌ Не вдалося отримати розклад епіків.")
+        return
+    if not items:
+        await message.answer("Не вдалося отримати розклад епіків.")
+        return
 
-        if not epics:
-            await message.answer(
-                "Не вдалося отримати розклад епіків."
+    lines = ["<b>Найближчі епіки</b>", ""]
+    for epic in items:
+        lines.extend(
+            (
+                f'• <b><a href="{escape(str(epic["url"]), quote=True)}">'
+                f'{escape(str(epic["name"]))}</a></b>',
+                escape(str(epic["date"])),
+                "",
             )
-            return
-
-        text = "<b>Найближчі епіки</b>\n\n"
-
-        for epic in epics:
-            text += (
-                f'• <b><a href="{epic["url"]}">{epic["name"]}</a></b>\n'
-                f'{epic["date"]}\n\n'
-            )
-
-        await message.answer(
-            text,
-            disable_web_page_preview=True
         )
-
-    except Exception as e:
-        await message.answer(
-            f"Помилка: {e}"
-        )
+    await message.answer(
+        "\n".join(lines).rstrip(),
+        disable_web_page_preview=True,
+    )
 
 
 @router.message(F.text == "📢 Оголошення")
-async def announcement(message: Message):
-
+async def announcement(message: Message) -> None:
     text = SettingsRepository.get_announcement()
-
-    if not text:
-        await message.answer(
-            "📢 Оголошень поки немає."
-        )
-        return
-
     await message.answer(
-        text
+        escape(text) if text else "📢 Оголошень поки немає."
     )

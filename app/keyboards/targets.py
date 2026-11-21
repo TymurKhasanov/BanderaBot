@@ -35,7 +35,6 @@ def targets_rosters_keyboard(rosters: dict) -> InlineKeyboardMarkup:
 
 def targets_keyboard(
     targets: list,
-    roster_id: str,
 ) -> InlineKeyboardMarkup:
 
     keyboard = []

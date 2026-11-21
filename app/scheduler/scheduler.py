@@ -1,84 +1,50 @@
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
+import logging
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from app.scheduler.jobs import check_prime
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+
 from app.database.repository import SettingsRepository
+from app.scheduler.jobs import check_prime
 
-
-scheduler = AsyncIOScheduler()
 
 KYIV_TZ = ZoneInfo("Europe/Kyiv")
+scheduler = AsyncIOScheduler(timezone=KYIV_TZ)
+logger = logging.getLogger("banderabot")
 
 
-def get_next_prime():
-
+def get_next_prime() -> tuple[datetime | None, object | None]:
     now = datetime.now(KYIV_TZ)
-
-    # Ищем ближайшее уведомление на следующие 7 дней
-    for i in range(8):
-
-        check_date = now + timedelta(days=i)
-
-        day = check_date.weekday() + 1
-
-        prime = SettingsRepository.get_today_prime(day)
-
+    for offset in range(8):
+        check_date = now + timedelta(days=offset)
+        prime = SettingsRepository.get_today_prime(check_date.weekday() + 1)
         if not prime:
             continue
-
-        start_time = datetime.strptime(
-            prime["start_time"],
-            "%H:%M"
-        ).time()
-
-        notification_datetime = (
-            datetime.combine(
-                check_date.date(),
-                start_time,
-                tzinfo=KYIV_TZ,
-            )
+        try:
+            start_time = datetime.strptime(prime["start_time"], "%H:%M").time()
+        except (TypeError, ValueError):
+            logger.exception("Invalid prime start time in database")
+            continue
+        notification = (
+            datetime.combine(check_date.date(), start_time, tzinfo=KYIV_TZ)
             - timedelta(minutes=30)
         )
-
-        # Если время уведомления уже прошло — ищем следующий прайм
-        if notification_datetime <= now:
-            continue
-
-        return notification_datetime, prime
-
+        if notification > now:
+            return notification, prime
     return None, None
 
 
-def start_scheduler():
-
+def start_scheduler() -> None:
+    if scheduler.running:
+        return
     scheduler.add_job(
         check_prime,
         "interval",
         minutes=1,
+        id="prime-reminder",
+        replace_existing=True,
+        max_instances=1,
+        coalesce=True,
     )
-
     scheduler.start()
-
-    print("SCHEDULER STARTED")
-    print(f"CURRENT TIME: {datetime.now(KYIV_TZ)}")
-
-    next_time, prime = get_next_prime()
-
-    if next_time:
-
-        print(
-            f"NEXT PRIME NOTIFICATION: "
-            f"{next_time.strftime('%Y-%m-%d %H:%M')}"
-        )
-
-        print(
-            f"PRIME TIME: "
-            f"{prime['start_time']} - {prime['end_time']}"
-        )
-
-        print("NOTIFICATION: 30 minutes before prime")
-
-    else:
-
-        print("NEXT PRIME NOTIFICATION: NOT FOUND")
+    logger.info("Scheduler started")

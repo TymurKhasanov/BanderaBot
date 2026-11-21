@@ -1,26 +1,25 @@
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
+
 
 BASE_URL = "https://mw2.wiki"
 
 
-def get_classes():
-    response = requests.get(
-        f"{BASE_URL}/lu4/classes",
-        timeout=10,
-    )
-    response.raise_for_status()
+async def get_classes() -> dict[str, list[dict[str, str]]]:
+    timeout = aiohttp.ClientTimeout(total=15)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        async with session.get(f"{BASE_URL}/lu4/classes") as response:
+            response.raise_for_status()
+            html = await response.text()
 
-    soup = BeautifulSoup(response.text, "html.parser")
-
-    races = {
+    soup = BeautifulSoup(html, "html.parser")
+    races: dict[str, list[dict[str, str]]] = {
         "human": [],
         "elf": [],
         "dark_elf": [],
         "orc": [],
         "dwarf": [],
     }
-
     race_map = {
         "race-0": "human",
         "race-1": "elf",
@@ -30,21 +29,19 @@ def get_classes():
     }
 
     for race_div in soup.select("div.tab-pane"):
-        race = race_map.get(race_div.get("id"))
-
+        race = race_map.get(str(race_div.get("id", "")))
         if not race:
             continue
 
         for link in race_div.select("a[href*='/class/']"):
-            href = link["href"]
-
-            slug = href.rstrip("/").split("/")[-1]
-
+            href = link.get("href")
+            if not isinstance(href, str):
+                continue
             races[race].append(
                 {
                     "name": link.get_text(strip=True),
-                    "slug": slug,
-                    "url": BASE_URL + href,
+                    "slug": href.rstrip("/").split("/")[-1],
+                    "url": f"{BASE_URL}{href}",
                 }
             )
 

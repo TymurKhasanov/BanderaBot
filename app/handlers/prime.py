@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 
-from app.database.repository import SettingsRepository
+from app.services.prime import save_prime_schedule
 from app.states.prime import PrimeStates
 
 
@@ -53,9 +53,15 @@ async def save_prime(
     state: FSMContext
 ):
 
-    SettingsRepository.update_prime_schedule(
-        message.text
-    )
+    if not message.text or not message.text.strip():
+        await message.answer("❌ Надішліть розклад текстом.")
+        return
+
+    try:
+        save_prime_schedule(message.text)
+    except ValueError as exc:
+        await message.answer(f"❌ {exc}")
+        return
 
     await state.clear()
 

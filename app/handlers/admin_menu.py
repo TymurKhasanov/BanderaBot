@@ -33,9 +33,6 @@ async def show_commands(
 📅 /setprime
 Змінити розклад прайму
 
-👹 /setepics
-Змінити розклад епіків
-
 📢 /setannounce
 Змінити оголошення
 

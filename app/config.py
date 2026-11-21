@@ -1,4 +1,6 @@
 from os import getenv
+from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,7 +12,7 @@ if not BOT_TOKEN:
 
 OWNER_ID = 137313739
 
-DATABASE_PATH = "bandera_bot.db"
+DATABASE_PATH = str(Path(__file__).resolve().parents[1] / "bandera_bot.db")
 
 # DCP API
 DCP_API_URL = getenv("DCP_API_URL")

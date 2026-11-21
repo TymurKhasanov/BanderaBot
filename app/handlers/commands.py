@@ -41,9 +41,6 @@ async def commands_list(message: Message):
 📅 /setprime
 Змінити розклад прайму
 
-👹 /setepics
-Змінити розклад епіків
-
 📢 /setannounce
 Змінити оголошення
 

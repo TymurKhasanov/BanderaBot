@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -6,97 +7,69 @@ from app.database.repository import SettingsRepository
 
 
 KYIV_TZ = ZoneInfo("Europe/Kyiv")
+logger = logging.getLogger("banderabot")
 
-last_sent = None
+
+def get_due_prime(now: datetime):
+    for day_offset in (0, 1):
+        prime_date = now.date() + timedelta(days=day_offset)
+        prime = SettingsRepository.get_today_prime(prime_date.weekday() + 1)
+        if not prime:
+            continue
+        try:
+            start_time = datetime.strptime(prime["start_time"], "%H:%M").time()
+        except (TypeError, ValueError):
+            logger.exception("Invalid prime start time in database")
+            continue
+        notification_time = (
+            datetime.combine(prime_date, start_time, tzinfo=KYIV_TZ)
+            - timedelta(minutes=30)
+        )
+        if now.strftime("%Y-%m-%d %H:%M") == notification_time.strftime(
+            "%Y-%m-%d %H:%M"
+        ):
+            return prime_date, prime
+    return None, None
 
 
-async def check_prime():
-
-    global last_sent
-
+async def check_prime() -> None:
     settings = SettingsRepository.get_settings()
-
     if not settings:
-        print("Settings not found")
+        logger.warning("Prime reminder skipped: settings not found")
         return
-
-    # Напоминания выключены
     if not settings["reminders_enabled"]:
-        print("Reminders disabled")
         return
-
-    # Нет группы
     if not settings["group_chat_id"]:
-        print("Group chat ID not configured")
+        logger.warning("Prime reminder skipped: group chat is not configured")
         return
 
     now = datetime.now(KYIV_TZ)
-
-    # Monday = 0 ... Sunday = 6
-    day = now.weekday() + 1
-
-    prime = SettingsRepository.get_today_prime(day)
-
-    print("=" * 50)
-    print(f"NOW: {now}")
-    print(f"DAY: {day}")
-    print(f"PRIME: {prime}")
-
-    if not prime:
-        print("No prime for today")
+    prime_date, prime = get_due_prime(now)
+    if prime_date is None or prime is None:
         return
-
-    start_time = datetime.strptime(
+    notification_date = prime_date.isoformat()
+    if not SettingsRepository.mark_prime_notification_sent(
+        notification_date,
         prime["start_time"],
-        "%H:%M"
-    ).time()
-
-    notification_time = (
-        datetime.combine(now.date(), start_time)
-        - timedelta(minutes=30)
-    ).time()
-
-    current_time = now.time().replace(
-        second=0,
-        microsecond=0
-    )
-
-    print(f"START: {start_time}")
-    print(f"NOTIFICATION: {notification_time}")
-    print(f"CURRENT: {current_time}")
-    print(f"END: {prime['end_time']}")
-
-    if current_time != notification_time:
-        print("Not time yet")
+    ):
         return
 
-    unique_key = (
-        now.date(),
-        prime["start_time"]
-    )
-
-    if last_sent == unique_key:
-        print("Already sent today")
-        return
-
-    message = f"""
-🇺🇦 <b>ПРАЙМ 🇺🇦</b>
-
-🕗 Час:
-{prime["start_time"]} - {prime["end_time"]}
-
-⏰ До початку прайму залишилося 30 хвилин!
-
-Час заходити в гру!
-Всім бути онлайн! 🔥
-"""
-
-    print(">>> SENDING MESSAGE <<<")
-
-    await bot.send_message(
-        settings["group_chat_id"],
-        message,
-        parse_mode="HTML"
-    )
-
-    last_sent = unique_key
+    try:
+        await bot.send_message(
+            chat_id=settings["group_chat_id"],
+            text=(
+                "🇺🇦 <b>ПРАЙМ 🇺🇦</b>\n\n"
+                "🕗 Час:\n"
+                f"{prime['start_time']} - {prime['end_time'] or '—'}\n\n"
+                "⏰ До початку прайму залишилося 30 хвилин!\n\n"
+                "Час заходити в гру!\n"
+                "Всім бути онлайн! 🔥"
+            ),
+        )
+    except Exception:
+        SettingsRepository.remove_prime_notification(
+            notification_date,
+            prime["start_time"],
+        )
+        logger.exception("Failed to send prime reminder")
+        raise

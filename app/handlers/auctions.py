@@ -1,3 +1,6 @@
+import logging
+from html import escape
+
 from aiogram import F, Router
 from aiogram.types import Message
 
@@ -5,73 +8,52 @@ from app.services.dcp_api import dcp_api
 
 
 router = Router()
+logger = logging.getLogger("banderabot")
 
 
 @router.message(F.text == "🏷️ Лоти")
-async def auctions(message: Message):
-
+async def auctions(message: Message) -> None:
     try:
-        auctions = dcp_api.get_auctions()
-        rosters = dcp_api.get_rosters()
-
-    except Exception as e:
-        await message.answer(
-            "❌ Не вдалося отримати лоти.\n\n"
-            f"Помилка: {e}"
-        )
+        items = await dcp_api.get_auctions()
+        rosters = await dcp_api.get_rosters()
+    except Exception:
+        logger.exception("Failed to retrieve DCP auctions")
+        await message.answer("❌ Сервіс лотів тимчасово недоступний.")
         return
 
-    # Только открытые аукционы
-    auctions = [
+    open_auctions = [
         auction
-        for auction in auctions
+        for auction in items
         if auction.get("status") == "OPEN"
     ]
-
-    if not auctions:
-        await message.answer(
-            "🏷️ Відкритих лотів немає."
-        )
+    if not open_auctions:
+        await message.answer("🏷️ Відкритих лотів немає.")
         return
 
-    # Словарь:
-    # roster ID -> roster name
     roster_names = {
-        str(roster["id"]): roster["name"]
+        str(roster.get("id")): str(roster.get("name", "Невідомий ростер"))
         for roster in rosters
     }
-
-    text = "🏷️ <b>Відкриті лоти</b>\n\n"
-
-    for auction in auctions:
-
-        lots = auction.get("lots", [])
-
-        for lot in lots:
-
-            title = lot.get("title", "Без назви")
-
+    lines = ["🏷️ <b>Відкриті лоти</b>", ""]
+    for auction in open_auctions:
+        for lot in auction.get("lots", []):
+            title = escape(str(lot.get("title") or "Без назви"))
+            lines.append(f"💎 <b>{title}</b>")
             top_bidder = lot.get("topBidderName")
             roster_id = lot.get("topBidderRosterId")
-
-            text += f"💎 <b>{title}</b>\n"
-
-            if top_bidder and roster_id:
+            if top_bidder and roster_id is not None:
                 roster_name = roster_names.get(
                     str(roster_id),
                     "Невідомий ростер",
                 )
-
-                text += (
-                    f"👤 Топ бідер: {top_bidder}\n"
-                    f"👥 Ростер: {roster_name}\n"
+                lines.extend(
+                    (
+                        f"👤 Топ бідер: {escape(str(top_bidder))}",
+                        f"👥 Ростер: {escape(roster_name)}",
+                    )
                 )
-
             else:
-                text += (
-                    "👤 Топ бідер: Немає ставок\n"
-                )
+                lines.append("👤 Топ бідер: Немає ставок")
+            lines.append("")
 
-            text += "\n"
-
-    await message.answer(text)
+    await message.answer("\n".join(lines).rstrip())

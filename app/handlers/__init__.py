@@ -11,6 +11,8 @@ from .admin_input import router as admin_input_router
 from .dcp import router as dcp_router
 from .skills import router as skills_router
 from .auctions import router as auctions_router
+from .commands import router as commands_router
+from .targets import router as targets_router
 
 
 routers = [
@@ -25,6 +27,8 @@ routers = [
     dcp_router,
     skills_router,
     auctions_router,
+    targets_router,
+    commands_router,
 
     admin_menu_router,
     admin_buttons_router,

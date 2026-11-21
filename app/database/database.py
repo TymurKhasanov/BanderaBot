@@ -60,6 +60,15 @@ def initialize_database():
             )
         """)
 
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS prime_notifications (
+                notification_date TEXT NOT NULL,
+                start_time TEXT NOT NULL,
+                sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (notification_date, start_time)
+            )
+        """)
+
 
 
         cursor.execute("""

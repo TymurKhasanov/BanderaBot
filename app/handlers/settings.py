@@ -1,5 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import Message
+from html import escape
 
 from app.config import OWNER_ID
 from app.database.repository import SettingsRepository
@@ -26,7 +27,7 @@ async def settings(message: Message):
 ⚙️ <b>Налаштування</b>
 
 📅 Час прайму:
-{settings["prime_time"] or "Не встановлено"}
+{escape(settings["prime_time"]) if settings["prime_time"] else "Не встановлено"}
 
 🔔 Нагадування:
 {"Увімкнено" if settings["reminders_enabled"] else "Вимкнено"}

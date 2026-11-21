@@ -111,7 +111,6 @@ def skills_keyboard(
     race: str,
     slug: str,
     skill_type: str,
-    category: str,
 ) -> InlineKeyboardMarkup:
     keyboard = []
 
@@ -119,8 +118,8 @@ def skills_keyboard(
         level = f" ({skill['level']})" if skill["level"] else ""
 
         callback = f"skill:{race}:{slug}:{skill['slug']}"
-
-        print(len(callback), callback)
+        if len(callback.encode("utf-8")) > 64:
+            raise ValueError("Telegram callback_data exceeds 64 bytes")
 
         keyboard.append(
             [

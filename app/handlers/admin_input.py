@@ -1,145 +1,71 @@
+import logging
+from html import escape
+
 from aiogram import Router
-from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
+from aiogram.types import Message
 
-import re
-
-from app.states.admin import AdminStates
 from app.database.repository import SettingsRepository
+from app.services.prime import save_prime_schedule
+from app.states.admin import AdminStates
 
 
 router = Router()
+logger = logging.getLogger("banderabot")
 
 
-DAYS = {
-    "Понеділок": 1,
-    "Вівторок": 2,
-    "Середа": 3,
-    "Четвер": 4,
-    "П’ятниця": 5,
-    "П'ятниця": 5,
-    "Субота": 6,
-    "Неділя": 7,
-}
-
+def require_text(message: Message) -> str | None:
+    return message.text.strip() if message.text and message.text.strip() else None
 
 
 @router.message(AdminStates.waiting_prime_time)
-async def save_prime_time(
-    message: Message,
-    state: FSMContext
-):
+async def save_prime_time(message: Message, state: FSMContext) -> None:
+    text = require_text(message)
+    if text is None:
+        await message.answer("❌ Надішліть текст розкладу.")
+        return
 
-    text = message.text.strip()
+    try:
+        save_prime_schedule(text)
+    except ValueError as exc:
+        await message.answer(f"❌ {escape(str(exc))}")
+        return
 
-
-    # Сохраняем красивый текст для показа в группе
-    SettingsRepository.update_prime_time(
-        text
-    )
-
-
-    # Чистим старое расписание
-    SettingsRepository.clear_prime_schedule()
-
-
-    # Разбираем дни недели
-    for line in text.split("\n"):
-
-        line = line.strip()
-
-        if not line:
-            continue
-
-
-        day_number = None
-
-
-        for day_name, number in DAYS.items():
-
-            if line.startswith(day_name):
-
-                day_number = number
-                break
-
-
-        if not day_number:
-            continue
-
-
-        times = re.findall(
-            r"\d{2}:\d{2}",
-            line
-        )
-
-
-        if len(times) >= 2:
-
-            SettingsRepository.add_prime_day(
-                day_number,
-                times[0],
-                times[1]
-            )
-
-
-    # Уведомление в группу
     settings = SettingsRepository.get_settings()
-
-    group_id = settings["group_chat_id"]
-
-
+    group_id = settings["group_chat_id"] if settings else None
     if group_id:
-
-        await message.bot.send_message(
-            group_id,
-            f"""
-📅 <b>Оновлено розклад прайму</b>
-
-{text}
-""",
-            parse_mode="HTML"
-        )
-
+        try:
+            await message.bot.send_message(
+                group_id,
+                "📅 <b>Оновлено розклад прайму</b>\n\n"
+                f"{escape(text)}",
+            )
+        except Exception:
+            logger.exception("Failed to notify bound group about prime update")
 
     await state.clear()
-
-
-    await message.answer(
-        "✅ Час прайму оновлено!"
-    )
-
+    await message.answer("✅ Розклад прайму оновлено!")
 
 
 @router.message(AdminStates.waiting_epics)
-async def save_epics(
-    message: Message,
-    state: FSMContext
-):
+async def save_epics(message: Message, state: FSMContext) -> None:
+    text = require_text(message)
+    if text is None:
+        await message.answer("❌ Надішліть розклад епіків.")
+        return
 
-    SettingsRepository.update_epics_schedule(
-        message.text
-    )
-
+    SettingsRepository.update_epics_schedule(text)
     await state.clear()
-
-    await message.answer(
-        "✅ Розклад епіків оновлено!"
-    )
-
+    await message.answer("✅ Розклад епіків оновлено!")
 
 
 @router.message(AdminStates.waiting_announcement)
-async def save_announcement(
-    message: Message,
-    state: FSMContext
-):
+async def save_announcement(message: Message, state: FSMContext) -> None:
+    text = require_text(message)
+    if text is None:
+        await message.answer("❌ Надішліть текст оголошення.")
+        return
 
-    SettingsRepository.update_announcement(
-        message.text
-    )
-
+    SettingsRepository.update_announcement(text)
     await state.clear()
-
-    await message.answer(
-        "✅ Оголошення оновлено!"
-    )
+    await message.answer("✅ Оголошення оновлено!")

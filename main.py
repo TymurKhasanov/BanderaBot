@@ -1,13 +1,12 @@
 import asyncio
 import logging
 
-from aiogram import Dispatcher
-
 from app.bot import bot
 from app.database import initialize_database
+from app.dispatcher import BanderaDispatcher
 from app.handlers import routers
 from app.middlewares.logging import LoggingMiddleware
-from app.scheduler.scheduler import start_scheduler
+from app.scheduler.scheduler import scheduler, start_scheduler
 
 
 logging.basicConfig(
@@ -20,7 +19,7 @@ logging.getLogger("apscheduler").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
-dp = Dispatcher()
+dp = BanderaDispatcher()
 
 # Подключаем middleware для логирования
 dp.message.middleware(LoggingMiddleware())
@@ -42,7 +41,11 @@ async def main():
     logging.info("BOT STARTED")
 
     # Запуск бота
-    await dp.start_polling(bot)
+    try:
+        await dp.start_polling(bot)
+    finally:
+        if scheduler.running:
+            scheduler.shutdown(wait=False)
 
 
 if __name__ == "__main__":

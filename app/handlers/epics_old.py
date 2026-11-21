@@ -1,35 +1,37 @@
-from aiogram import Router, F
+import logging
+from html import escape
+
+from aiogram import F, Router
 from aiogram.types import Message
 
 from app.services.wiki import get_epics
 
+
 router = Router()
+logger = logging.getLogger("banderabot")
 
 
 @router.message(F.text == "👹 Епіки")
-async def show_epics(message: Message):
+async def show_epics(message: Message) -> None:
     try:
-        epics = get_epics()
+        epics = await get_epics()
+    except Exception:
+        logger.exception("Failed to retrieve epics")
+        await message.answer("❌ Не вдалося отримати розклад епіків.")
+        return
 
-        if not epics:
-            await message.answer("❌ Не вдалося отримати розклад епіків.")
-            return
+    if not epics:
+        await message.answer("❌ Не вдалося отримати розклад епіків.")
+        return
 
-        text = "👹 <b>Найближчі епіки</b>\n\n"
-
-        for epic in epics:
-            text += (
-                f"🔸 <b>{epic['name']}</b>\n"
-                f"🕒 {epic['date']}\n"
-                f"🔗 {epic['url']}\n\n"
+    lines = ["👹 <b>Найближчі епіки</b>", ""]
+    for epic in epics:
+        lines.extend(
+            (
+                f"🔸 <b>{escape(str(epic['name']))}</b>",
+                f"🕒 {escape(str(epic['date']))}",
+                f"🔗 {escape(str(epic['url']))}",
+                "",
             )
-
-        await message.answer(
-            text,
-            disable_web_page_preview=True
         )
-
-    except Exception as e:
-        await message.answer(
-            f"❌ Помилка отримання даних:\n<code>{e}</code>"
-        )
+    await message.answer("\n".join(lines).rstrip(), disable_web_page_preview=True)

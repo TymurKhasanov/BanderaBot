@@ -52,9 +52,11 @@ async def save_announcement(
     message: Message,
     state: FSMContext
 ):
-    SettingsRepository.update_announcement(
-        message.text
-    )
+    if not message.text or not message.text.strip():
+        await message.answer("❌ Надішліть текст оголошення.")
+        return
+
+    SettingsRepository.update_announcement(message.text.strip())
 
     await state.clear()
 

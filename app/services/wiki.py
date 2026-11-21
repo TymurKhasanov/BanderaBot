@@ -1,9 +1,18 @@
-# app/services/wiki.py
+import asyncio
+import time
+from typing import Any
 
-import requests
 from bs4 import BeautifulSoup
+from playwright.async_api import Browser, Playwright, async_playwright
+
 
 WIKI_URL = "https://masterwork.wiki/lu4-b-w-c/main"
+WIKI_ORIGIN = "https://masterwork.wiki"
+CACHE_SECONDS = 300
+
+_epics_cache: list[dict[str, Any]] = []
+_cache_expires_at = 0.0
+_cache_lock = asyncio.Lock()
 
 EPICS = {
     "Core",
@@ -16,34 +25,78 @@ EPICS = {
 }
 
 
-def get_epics():
-    response = requests.get(WIKI_URL, timeout=10)
-    response.raise_for_status()
+async def _load_page(playwright: Playwright) -> str:
+    browser: Browser = await playwright.chromium.launch(headless=True)
+    try:
+        context = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/141.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1280, "height": 720},
+        )
+        page = await context.new_page()
+        response = await page.goto(
+            WIKI_URL,
+            wait_until="domcontentloaded",
+            timeout=30_000,
+        )
+        if response is not None and response.status >= 500:
+            raise RuntimeError(f"Wiki returned HTTP {response.status}")
 
-    soup = BeautifulSoup(response.text, "html.parser")
+        await page.wait_for_selector("a.calendar_event", timeout=20_000)
+        return await page.content()
+    finally:
+        await browser.close()
 
-    result = []
 
-    for event in soup.select("a.calendar_event"):
-        title = event.select_one(".calendar_event_title").get_text(strip=True)
+async def get_epics() -> list[dict[str, Any]]:
+    global _cache_expires_at, _epics_cache
 
-        if title not in EPICS:
-            continue
+    now = time.monotonic()
+    if _epics_cache and now < _cache_expires_at:
+        return [event.copy() for event in _epics_cache]
 
-        date = event.select_one(".calendar_event_date span").get_text(strip=True)
+    async with _cache_lock:
+        now = time.monotonic()
+        if _epics_cache and now < _cache_expires_at:
+            return [event.copy() for event in _epics_cache]
 
-        timestamp = event.select_one(".calendar_event_date span")["title"]
+        async with async_playwright() as playwright:
+            html = await _load_page(playwright)
 
-        url = event["href"]
+        soup = BeautifulSoup(html, "html.parser")
+        result: list[dict[str, Any]] = []
 
-        if url.startswith("/"):
-            url = "https://masterwork.wiki" + url
+        for event in soup.select("a.calendar_event"):
+            title_tag = event.select_one(".calendar_event_title")
+            date_tag = event.select_one(".calendar_event_date span")
+            if title_tag is None or date_tag is None:
+                continue
 
-        result.append({
-            "name": title,
-            "date": date,
-            "timestamp": timestamp,
-            "url": url,
-        })
+            title = title_tag.get_text(strip=True)
+            if title not in EPICS:
+                continue
 
-    return result
+            href = event.get("href", "")
+            url = (
+                href
+                if isinstance(href, str) and href.startswith("http")
+                else f"{WIKI_ORIGIN}{href}"
+            )
+            result.append(
+                {
+                    "name": title,
+                    "date": date_tag.get_text(strip=True),
+                    "timestamp": date_tag.get("title", ""),
+                    "url": url,
+                }
+            )
+
+        if not result:
+            raise RuntimeError("Wiki calendar did not contain supported epic events")
+
+        _epics_cache = result
+        _cache_expires_at = time.monotonic() + CACHE_SECONDS
+        return [event.copy() for event in result]

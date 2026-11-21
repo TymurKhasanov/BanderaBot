@@ -9,8 +9,6 @@ from app.config import OWNER_ID
 
 router = Router()
 
-print("ADMIN BUTTONS LOADED")
-
 
 async def check_admin(callback: CallbackQuery) -> bool:
 
@@ -56,8 +54,6 @@ async def change_prime_time(
     state: FSMContext
 ):
 
-    print("CLICK:", callback.data)
-
     if not await check_admin(callback):
         return
 
@@ -91,8 +87,6 @@ async def change_epics(
     state: FSMContext
 ):
 
-    print("CLICK:", callback.data)
-
     if not await check_admin(callback):
         return
 
@@ -124,8 +118,6 @@ async def change_epics(
 async def toggle_reminders(
     callback: CallbackQuery
 ):
-
-    print("CLICK:", callback.data)
 
     if not await check_admin(callback):
         return
@@ -171,8 +163,6 @@ async def change_announcement(
     state: FSMContext
 ):
 
-    print("CLICK:", callback.data)
-
     if not await check_admin(callback):
         return
 
@@ -204,8 +194,6 @@ async def change_announcement(
 async def bind_group(
     callback: CallbackQuery
 ):
-
-    print("CLICK:", callback.data)
 
     if not await check_admin(callback):
         return
