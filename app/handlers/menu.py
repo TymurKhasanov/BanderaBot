@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from html import escape
 
@@ -22,14 +23,22 @@ async def prime(message: Message) -> None:
 
 @router.message(F.text == "👹 Епіки")
 async def epics(message: Message) -> None:
+    loading = await message.answer("⏳ Завантажую розклад епіків…")
+    task = asyncio.create_task(get_epics())
     try:
-        items = await get_epics()
+        done, _ = await asyncio.wait({task}, timeout=35)
+        if not done:
+            task.cancel()
+            raise TimeoutError("Epic refresh timed out")
+        items = task.result()
     except Exception:
         logger.exception("Failed to retrieve epics")
-        await message.answer("❌ Не вдалося отримати розклад епіків.")
+        await loading.edit_text(
+            "❌ Wiki не відповідає. Спробуйте повторити через хвилину."
+        )
         return
     if not items:
-        await message.answer("Не вдалося отримати розклад епіків.")
+        await loading.edit_text("❌ Календар епіків наразі порожній.")
         return
 
     lines = ["<b>Найближчі епіки</b>", ""]
@@ -42,7 +51,7 @@ async def epics(message: Message) -> None:
                 "",
             )
         )
-    await message.answer(
+    await loading.edit_text(
         "\n".join(lines).rstrip(),
         disable_web_page_preview=True,
     )
