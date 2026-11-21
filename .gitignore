@@ -16,6 +16,8 @@ logs/
 # SQLite databases
 *.db
 *.sqlite3
+app/data/epics_cache.json
+app/data/epics_cache.tmp
 
 # IDE
 .vscode/
