@@ -1,4 +1,5 @@
 import unittest
+from decimal import Decimal
 from datetime import datetime
 from unittest.mock import patch
 from zoneinfo import ZoneInfo
@@ -12,6 +13,11 @@ from app.handlers.dcp import (
     roster_list_text,
 )
 from app.services.prime import parse_prime_schedule
+from app.services.experience import (
+    calculate_remaining_exp,
+    parse_level,
+    parse_percent,
+)
 from app.scheduler.jobs import get_due_prime
 
 
@@ -147,6 +153,26 @@ class PrimeReminderTests(unittest.TestCase):
 
         self.assertEqual(prime_date.isoformat(), "2026-11-22")
         self.assertEqual(prime["start_time"], "00:15")
+
+
+class ExperienceTests(unittest.TestCase):
+    def test_parses_level_and_localized_percent(self) -> None:
+        self.assertEqual(parse_level(" 68 "), 68)
+        self.assertEqual(parse_percent("53,5%"), Decimal("53.5"))
+
+    def test_rejects_unsupported_level(self) -> None:
+        with self.assertRaisesRegex(ValueError, "від 1 до 74"):
+            parse_level("75")
+
+    def test_calculates_remaining_exp_from_next_level_row(self) -> None:
+        result = calculate_remaining_exp(68, Decimal("53.5"))
+        self.assertEqual(result["required"], 236_000_000)
+        self.assertEqual(result["earned"], 126_260_000)
+        self.assertEqual(result["remaining"], 109_740_000)
+
+    def test_calculates_hundred_percent_as_complete(self) -> None:
+        result = calculate_remaining_exp(1, Decimal("100"))
+        self.assertEqual(result["remaining"], 0)
 
 
 if __name__ == "__main__":

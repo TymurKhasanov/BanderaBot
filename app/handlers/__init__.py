@@ -13,6 +13,7 @@ from .skills import router as skills_router
 from .auctions import router as auctions_router
 from .commands import router as commands_router
 from .targets import router as targets_router
+from .experience import router as experience_router
 
 
 routers = [
@@ -29,6 +30,7 @@ routers = [
     auctions_router,
     targets_router,
     commands_router,
+    experience_router,
 
     admin_menu_router,
     admin_buttons_router,

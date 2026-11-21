@@ -9,6 +9,7 @@ main_keyboard = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="⚔️ Skills"),
+            KeyboardButton(text="📈 EXP"),
         ],
         [
             KeyboardButton(text="📢 Оголошення"),
