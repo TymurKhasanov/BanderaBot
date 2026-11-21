@@ -13,6 +13,22 @@ router = Router()
 logger = logging.getLogger("banderabot")
 
 
+async def update_epics_timer(message: Message) -> None:
+    elapsed = 0
+    try:
+        while True:
+            await asyncio.sleep(3)
+            elapsed += 3
+            await message.edit_text(
+                "⏳ Завантажую розклад епіків…\n"
+                f"Минуло {elapsed} с · зазвичай 5–10 с"
+            )
+    except asyncio.CancelledError:
+        pass
+    except Exception:
+        logger.debug("Could not update epics loading timer", exc_info=True)
+
+
 @router.message(F.text == "📅 Прайм")
 async def prime(message: Message) -> None:
     schedule = SettingsRepository.get_prime_schedule()
@@ -23,8 +39,12 @@ async def prime(message: Message) -> None:
 
 @router.message(F.text == "👹 Епіки")
 async def epics(message: Message) -> None:
-    loading = await message.answer("⏳ Завантажую розклад епіків…")
+    loading = await message.answer(
+        "⏳ Завантажую розклад епіків…\n"
+        "Минуло 0 с · зазвичай 5–10 с"
+    )
     task = asyncio.create_task(get_epics())
+    timer = asyncio.create_task(update_epics_timer(loading))
     try:
         done, _ = await asyncio.wait({task}, timeout=35)
         if not done:
@@ -37,6 +57,9 @@ async def epics(message: Message) -> None:
             "❌ Wiki не відповідає. Спробуйте повторити через хвилину."
         )
         return
+    finally:
+        timer.cancel()
+        await timer
     if not items:
         await loading.edit_text("❌ Календар епіків наразі порожній.")
         return
